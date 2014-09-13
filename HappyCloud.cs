@@ -5,6 +5,7 @@ namespace Project1
 {
     public class HappyCloud : SceneryObject
     {
+        public const int ScoreAward = 5;
         public static readonly Sprite HappyCloudSprite = new Sprite(Properties.Resources.HappyCloudFileName, origin: IntVector.Zero);
         public HappyCloud(double x, double y) : base(x, y) { }
         public HappyCloud(Point location) : base(location) { }

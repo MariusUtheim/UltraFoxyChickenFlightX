@@ -5,6 +5,7 @@ namespace Project1
 {
     public class AngryCloud : SceneryObject
     {
+        public const int ScorePenalty = 5;
         public static readonly Sprite AngryCloudSprite = new Sprite(Properties.Resources.AngryCloudFileName, origin: IntVector.Zero);
         public AngryCloud(double x, double y) : base(x, y) { }
         public AngryCloud(Point location) : base(location) { }
