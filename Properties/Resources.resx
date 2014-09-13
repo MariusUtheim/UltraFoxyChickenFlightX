@@ -133,7 +133,7 @@
     <value>Resources\farmer.png</value>
   </data>
   <data name="GoodTreeSoundName" xml:space="preserve">
-    <value>Resources\85581__jankoehl__hit-bush01.ogg</value>
+    <value>Resources\bush.ogg</value>
   </data>
   <data name="FoxyHappyFileName" xml:space="preserve">
     <value>Resources\foxyhappy.png</value>
@@ -151,13 +151,16 @@
     <value>Resources\happycloud_2.png</value>
   </data>
   <data name="HappyCloudSoundName" xml:space="preserve">
-    <value>Resources\englesky shorter.ogg</value>
+    <value>Resources\englesky.ogg</value>
   </data>
   <data name="HenhouseFileName" xml:space="preserve">
     <value>Resources\henhouse.png</value>
   </data>
   <data name="NumbersSpriteFileName" xml:space="preserve">
     <value>Resources\0_9.png</value>
+  </data>
+  <data name="AngryCloudSoundName" xml:space="preserve">
+    <value>Resources\thunder.ogg</value>
   </data>
   <data name="MenuContinueFileName" xml:space="preserve">
     <value>Resouces\continue.png</value>

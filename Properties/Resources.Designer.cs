@@ -79,6 +79,15 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\thunder.ogg.
+        /// </summary>
+        internal static string AngryCloudSoundName {
+            get {
+                return ResourceManager.GetString("AngryCloudSoundName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\bg.png.
         /// </summary>
         internal static string BackgroundFileName {
@@ -124,7 +133,7 @@ namespace Project1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resources\85581__jankoehl__hit-bush01.ogg.
+        ///   Looks up a localized string similar to Resources\bush.ogg.
         /// </summary>
         internal static string GoodTreeSoundName {
             get {
@@ -160,7 +169,7 @@ namespace Project1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resources\englesky shorter.ogg.
+        ///   Looks up a localized string similar to Resources\englesky.ogg.
         /// </summary>
         internal static string HappyCloudSoundName {
             get {
