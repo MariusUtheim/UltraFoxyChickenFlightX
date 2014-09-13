@@ -99,11 +99,13 @@ namespace Project1
         public void OnCollision(AngryCloud angryCloud)
         {
             Statistics.Score -= AngryCloud.ScorePenalty;
+            Statistics.Energy -= AngryCloud.EngeryPenalty;
         }
 
         public void OnCollision(HappyCloud happyCloud)
         {
             Statistics.Score += HappyCloud.ScoreAward;
+            Statistics.Energy += HappyCloud.EngeryAward;
         }
 
         public void OnCollision(GoodTree other)
