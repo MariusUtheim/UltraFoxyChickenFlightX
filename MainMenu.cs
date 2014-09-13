@@ -20,6 +20,7 @@ namespace Project1
 			new Player(new Point(350, 250));
 			Spawner.Activate();
 			this.Destroy();
+			GUI.Init();
 #endif
 		}
 

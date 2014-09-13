@@ -17,6 +17,7 @@ namespace Project1
 			this.Velocity = InitialFlappingSpeed;
 			Sprite = Sprites.FoxyHappy;
 			Transform.Scale *= 0.1;
+			Image.Speed = 0;
 		}
 
         public void OnGlobalMousePress(MouseButton button)
