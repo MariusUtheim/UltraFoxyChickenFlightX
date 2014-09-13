@@ -115,6 +115,15 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\englesky.ogg.
+        /// </summary>
+        internal static string HappyCloudSoundName {
+            get {
+                return ResourceManager.GetString("HappyCloudSoundName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\henhouse.png.
         /// </summary>
         internal static string HenhouseFileName {

@@ -5,6 +5,7 @@ namespace Project1
 {
     public class HappyCloud : SceneryObject
     {
+        public static readonly Sound HappyCloudSound = new Sound(Properties.Resources.HappyCloudSoundName);
         public const int ScoreAward = 4;
         public const int EngeryAward = 32;
         public static readonly Sprite HappyCloudSprite1 = new Sprite(Properties.Resources.HappyCloudFileName1, origin: IntVector.Zero);
@@ -25,6 +26,7 @@ namespace Project1
 				Statistics.Score += HappyCloud.ScoreAward;
 				Statistics.Energy += HappyCloud.EngeryAward;
                 this.Sprite = HappyCloudSprite2;
+                HappyCloudSound.Play();
 			}
 			this.HasCollided = true;
 		}
