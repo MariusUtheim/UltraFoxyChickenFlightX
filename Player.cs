@@ -6,9 +6,9 @@ namespace Project1
     public class Player : MovingObject, IGlobalMousePressListener, ICollisionListener<BadTree>
     {
         public const int Radius = 15;
-        private static readonly Vector GravitySpeed = new Vector(0, 1.5);
-        private static readonly Vector InitialFlappingSpeed = new Vector(0, -15);
-        private static readonly Vector FlappingSpeed = new Vector(0, -12);
+        private static readonly Vector GravitySpeed = new Vector(0, 0.25);
+        private static readonly Vector InitialFlappingSpeed = new Vector(0, -6);
+        private static readonly Vector FlappingSpeed = new Vector(0, -3);
 
         public static int Diameter
         { get { return Radius * 2; } }
