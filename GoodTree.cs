@@ -20,6 +20,7 @@ namespace Project1
 			if (!(this.HasCollided))
             {
                 player.Velocity = BoostAward;
+                Sounds.GoodTree.Play();
             }
             this.HasCollided = true;
 		}

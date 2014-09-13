@@ -23,6 +23,7 @@ namespace Project1
                 Statistics.Score -= AngryCloud.ScorePenalty;
                 Statistics.Energy -= AngryCloud.EngeryPenalty; 
                 this.Sprite = Sprites.AngryCloudSuperAngry;
+                Sounds.AngryCloud.Play();
             }
             this.HasCollided = true;
 		}

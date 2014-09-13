@@ -15,10 +15,10 @@ namespace Project1
             : base(location)
         {
 			this.Velocity = InitialFlappingSpeed;
-			Sprite = Sprites.FoxyScared;
+			Sprite = Sprites.FoxyHappy;
 			Transform.Scale *= 0.1;
-#warning TODO: Change this when we get the right photo
-			Image.Speed = 0.0;
+			Image.Speed = 0;
+            this.Mask.Rectangle(597, 681, 729 - 597, 1293 - 681);
 		}
 
         public void OnGlobalMousePress(MouseButton button)
