@@ -75,6 +75,7 @@
     <Compile Include="GUI.cs" />
     <Compile Include="HappyCloud.cs" />
     <Compile Include="Henhouse.cs" />
+    <Compile Include="MainMenu.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PreGamePlayer.cs" />
     <Compile Include="Program.cs" />

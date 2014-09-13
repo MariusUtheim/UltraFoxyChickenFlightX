@@ -23,7 +23,7 @@ namespace Project1
 			spawnAlarm.IsLooping = true;
 		}
 
-		private static void Deactivate()
+		public static void Deactivate()
 		{
 			if (!isActive)
 				return;
