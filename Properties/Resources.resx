@@ -132,6 +132,12 @@
   <data name="FarmerFileName" xml:space="preserve">
     <value>Resources\farmer.png</value>
   </data>
+  <data name="FoxyHappyFileName" xml:space="preserve">
+    <value>Resources\foxyhappy.png</value>
+  </data>
+  <data name="FoxyScaredFileName" xml:space="preserve">
+    <value>Resources\foxyscared.png</value>
+  </data>
   <data name="GoodTreeSpriteFileName" xml:space="preserve">
     <value>Resources\epletre.png</value>
   </data>

@@ -106,6 +106,24 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\foxyhappy.png.
+        /// </summary>
+        internal static string FoxyHappyFileName {
+            get {
+                return ResourceManager.GetString("FoxyHappyFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources\foxyscared.png.
+        /// </summary>
+        internal static string FoxyScaredFileName {
+            get {
+                return ResourceManager.GetString("FoxyScaredFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\epletre.png.
         /// </summary>
         internal static string GoodTreeSpriteFileName {
