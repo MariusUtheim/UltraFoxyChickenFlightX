@@ -14,7 +14,7 @@ namespace Project1
         {
             this.Sprite = Sprites.HappyCloud;
             this.Transform.Scale *= .2;
-            this.Mask.Rectangle(126, 283, 528 - 126, this.Sprite.Height - 283);
+            this.Mask.Rectangle(new IntRectangle(126, 283, 528 - 126, this.Sprite.Height - 283) - Sprite.Origin.GetValueOrDefault());
         }
 
 		public override void OnCollision(Player player)
@@ -35,7 +35,7 @@ namespace Project1
 
 			if (HasCollided)
 			{
-				wobbleAmount += 0.04;
+				wobbleAmount += 0.2;
 				Transform.Rotation = Angle.Deg(5 * GMath.Sin(wobbleAmount));
 			}
 		}
