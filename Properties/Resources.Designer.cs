@@ -97,6 +97,15 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\farmer.png.
+        /// </summary>
+        internal static string FarmerFileName {
+            get {
+                return ResourceManager.GetString("FarmerFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\epletre.png.
         /// </summary>
         internal static string GoodTreeSpriteFileName {
