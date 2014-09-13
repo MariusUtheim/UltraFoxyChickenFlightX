@@ -37,7 +37,7 @@ namespace Project1
 		{
 			this.Destroy();
 			new Player(this.Location);
-//			new Farmer();
+            new Farmer();
 			Instance<Henhouse>.First().Velocity = SceneryObject.MovementSpeed;
 			Spawner.Activate();
 			GUI.Init();
