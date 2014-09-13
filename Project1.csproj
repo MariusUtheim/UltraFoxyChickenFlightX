@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="AngryCloud.cs" />
     <Compile Include="BadTree.cs" />
+    <Compile Include="Farmer.cs" />
     <Compile Include="GoodTree.cs" />
     <Compile Include="GUI.cs" />
     <Compile Include="HappyCloud.cs" />
@@ -104,7 +105,7 @@
     <Content Include="External\libogg.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="External\openal32.dll">
+    <Content Include="openal32.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="External\vorbis.dll">
@@ -158,6 +159,9 @@
     <Content Include="Resources\epletre.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\farmer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\furutre.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -178,6 +182,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\englesky shorter.ogg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\englesky.ogg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

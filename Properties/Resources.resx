@@ -129,6 +129,9 @@
   <data name="BadTreeSpriteFileName" xml:space="preserve">
     <value>Resources\furutre.png</value>
   </data>
+  <data name="FarmerFileName" xml:space="preserve">
+    <value>Resources\farmer.png</value>
+  </data>
   <data name="GoodTreeSpriteFileName" xml:space="preserve">
     <value>Resources\epletre.png</value>
   </data>
@@ -139,7 +142,7 @@
     <value>Resources\happycloud_2.png</value>
   </data>
   <data name="HappyCloudSoundName" xml:space="preserve">
-    <value>Resources\englesky.ogg</value>
+    <value>Resources\englesky shorter.ogg</value>
   </data>
   <data name="HenhouseFileName" xml:space="preserve">
     <value>Resources\henhouse.png</value>
