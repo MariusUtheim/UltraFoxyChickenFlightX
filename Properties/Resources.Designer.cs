@@ -133,7 +133,7 @@ namespace Project1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resources\englesky.ogg.
+        ///   Looks up a localized string similar to Resources\englesky shorter.ogg.
         /// </summary>
         internal static string HappyCloudSoundName {
             get {
