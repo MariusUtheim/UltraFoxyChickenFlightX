@@ -60,6 +60,11 @@ namespace Project1
 
 			Transform.Rotation = Angle.Deg(15 + 4 * GMath.Sin(Time.LoopCount * 0.1));
 
+            if (this.Y < 0 && this.Velocity.Y < 0)
+            {
+                this.Velocity = new Vector(this.Velocity.X, 0);
+            }
+
             if (this.backgroundMusicInstance.Volume < 1)
             {
                 this.backgroundMusicInstance.Volume += .1;
