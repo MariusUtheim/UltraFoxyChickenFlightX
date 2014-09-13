@@ -7,6 +7,7 @@ namespace Project1
     {
         public const int ScoreAward = 4;
         public const int EngeryAward = 32;
+		private double wobbleAmount = 0;
 
         public HappyCloud()
             : base(Room.Width + 50, GRandom.Int(100, 300))
@@ -26,6 +27,17 @@ namespace Project1
                 Sounds.HappyCloud.Play();
 			}
 			this.HasCollided = true;
+		}
+
+		public override void OnStep()
+		{
+			base.OnStep();
+
+			if (HasCollided)
+			{
+				wobbleAmount += 0.04;
+				Transform.Rotation = Angle.Deg(5 * GMath.Sin(wobbleAmount));
+			}
 		}
     }
 }

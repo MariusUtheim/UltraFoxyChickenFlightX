@@ -6,11 +6,11 @@ namespace Project1
     public class BadTree : SceneryObject
     {
 
-		public BadTree() : base(Room.Width + 50, 380)
+		public BadTree() : base(Room.Width + 50, Room.Height - 80)
 		{
             this.Sprite = Sprites.BadTree;
             this.Transform.Scale *= .325;
-            this.Mask.Rectangle(350, 333, 485 - 350, this.Sprite.Height - 333);
+            this.Mask.Rectangle(new IntRectangle(350, 333, 485 - 350, this.Sprite.Height - 333) - Sprite.Origin.GetValueOrDefault());
         }
 
 		public override void OnCollision(Player player)
