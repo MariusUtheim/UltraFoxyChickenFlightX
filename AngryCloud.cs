@@ -7,13 +7,11 @@ namespace Project1
     {
 		public const int ScorePenalty = 4;
         public const int EngeryPenalty = 32;
-		private static Sprite AngryCloudSprite1 = new Sprite(Properties.Resources.AngryCloudFileName1, origin: IntVector.Zero);
-        private static Sprite AngryCloudSprite2 = new Sprite(Properties.Resources.AngryCloudFileName2, origin: IntVector.Zero);
 
 
 		public AngryCloud() : base(Room.Width + 50, GRandom.Int(100, 300))
 		{
-			Sprite = AngryCloudSprite1;
+			Sprite = Sprites.AngryCloud;
 			Transform.Scale *= 0.2;
             this.Mask.Rectangle(245, 250, 754 - 245, 612 - 250);
 		}
@@ -24,7 +22,7 @@ namespace Project1
             {
                 Statistics.Score -= AngryCloud.ScorePenalty;
                 Statistics.Energy -= AngryCloud.EngeryPenalty; 
-                this.Sprite = AngryCloudSprite2;
+                this.Sprite = Sprites.AngryCloudSuperAngry;
             }
             this.HasCollided = true;
 		}

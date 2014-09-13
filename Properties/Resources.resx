@@ -151,6 +151,6 @@
     <value>Resources\henhouse.png</value>
   </data>
   <data name="NumbersSpriteFileName" xml:space="preserve">
-    <value>Resources\0 to 9.png</value>
+    <value>Resources\0_9.png</value>
   </data>
 </root>
