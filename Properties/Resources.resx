@@ -129,8 +129,11 @@
   <data name="GoodTreeSpriteFileName" xml:space="preserve">
     <value>Resources\epletre.png</value>
   </data>
-  <data name="HappyCloudFileName" xml:space="preserve">
+  <data name="HappyCloudFileName1" xml:space="preserve">
     <value>Resources\happycloud.png</value>
+  </data>
+  <data name="HappyCloudFileName2" xml:space="preserve">
+    <value>Resources\happycloud_2.png</value>
   </data>
   <data name="HenhouseFileName" xml:space="preserve">
     <value>Resources\henhouse.png</value>
