@@ -48,9 +48,9 @@ namespace Project1
 
         public override void OnStep()
         {
-            this.Velocity += GravitySpeed;
+                this.Velocity += GravitySpeed;
 
-            Statistics.Score += StepScore;
+                Statistics.Score += StepScore;
 
             base.OnStep();
         }
@@ -66,6 +66,11 @@ namespace Project1
         public override void OnDraw()
         {
             Fill.Circle(Color.Red, this.Location, Radius);
+
+			Rectangle fullHealthRegion = new Rectangle(20, 20, 128, 20);
+			Rectangle currentHealthRegion = new Rectangle(20, 20, Statistics.Energy, 20);
+			Fill.Rectangle(Color.Red, Color.White, Color.LightBlue, Color.DarkRed, currentHealthRegion);
+			Draw.Rectangle(Color.Black, fullHealthRegion);
         }
 
         public override void OnDestroy()
@@ -73,5 +78,5 @@ namespace Project1
             Game.Sleep(1200);
             Game.Quit();
         }
-    }
+	}
 }

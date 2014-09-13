@@ -28,7 +28,7 @@ namespace Project1
             set
             {
                 int oldEngery = energy;
-                energy = value;
+                energy = GMath.Max(value, 0);
                 if (value != oldEngery && EnergyChanged != null)
                 {
                     EnergyChanged(value);
