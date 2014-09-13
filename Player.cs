@@ -31,16 +31,6 @@ namespace Project1
         private void Init()
         {
             this.Mask.Circle(Radius);
-
-            Statistics.EnergyChanged += OnEnergyChanged;
-        }
-
-        private void OnEnergyChanged(int value)
-        {
-            if (value <= 0)
-            {
-                this.Destroy();
-            }
         }
 
         public void OnGlobalMousePress(MouseButton button)
@@ -52,13 +42,14 @@ namespace Project1
                 {
                     this.Velocity += InitialFlappingSpeed;
                     this.IsStarted = true;
+                    Statistics.Energy -= FlappingCost;
                 }
-                else
+                else if (Statistics.Energy > FlappingCost)
                 {
                     this.Velocity += FlappingSpeed;
+                    Statistics.Energy -= FlappingCost;
                 }
 
-                Statistics.Energy -= FlappingCost;
             }
         }
 
