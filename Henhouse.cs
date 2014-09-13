@@ -17,7 +17,7 @@ namespace Project1
 
 		public override void OnStep()
 		{
-			Image.Alpha += 0.02;
+			Image.Alpha += 0.01;
 		}
 
 		public override void OnCollision(Player player)

@@ -18,7 +18,6 @@ namespace Project1
 				return;
 
 			isActive = true;
-			GlobalEvent.Step += () => { Background.Offset += SceneryObject.MovementSpeed / 4; };
 
 			spawnAlarm = Alarm.Start(60, spawnObject);
 			spawnAlarm.IsLooping = true;

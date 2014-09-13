@@ -5,15 +5,11 @@ namespace Project1
 {
     public class Player : MovingObject, IGlobalMousePressListener, IKeyPressListener
     {
-        public const int Radius = 15;
         private const int FlappingCost = 2;
         private const int StepScore = 1;
         private static readonly Vector GravitySpeed = new Vector(0, 0.25);
         private static readonly Vector InitialFlappingSpeed = new Vector(0, -6);
         private static readonly Vector FlappingSpeed = new Vector(0, -4);
-
-        public static int Diameter
-        { get { return Radius * 2; } }
 
         public Player(double x, double y)
             : base(x, y)
@@ -30,7 +26,7 @@ namespace Project1
         private void Init()
         {
             this.Velocity += InitialFlappingSpeed;
-            this.Mask.Circle(Radius);
+
         }
 
         public void OnGlobalMousePress(MouseButton button)
@@ -61,19 +57,6 @@ namespace Project1
             Statistics.Score += StepScore;
 
             base.OnStep();
-        }
-
-        public override void OnEndStep()
-        {
-            if (this.Y + Radius >= Window.Height)
-            {
-                this.Destroy();
-            }
-        }
-
-        public override void OnDraw()
-        {
-            Fill.Circle(Color.Red, this.Location, Radius);
         }
 
         public override void OnDestroy()

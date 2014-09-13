@@ -135,6 +135,12 @@
   <data name="GoodTreeSoundName" xml:space="preserve">
     <value>Resources\85581__jankoehl__hit-bush01.ogg</value>
   </data>
+  <data name="FoxyHappyFileName" xml:space="preserve">
+    <value>Resources\foxyhappy.png</value>
+  </data>
+  <data name="FoxyScaredFileName" xml:space="preserve">
+    <value>Resources\foxyscared.png</value>
+  </data>
   <data name="GoodTreeSpriteFileName" xml:space="preserve">
     <value>Resources\epletre.png</value>
   </data>
@@ -152,5 +158,17 @@
   </data>
   <data name="NumbersSpriteFileName" xml:space="preserve">
     <value>Resources\0_9.png</value>
+  </data>
+  <data name="MenuContinueFileName" xml:space="preserve">
+    <value>Resouces\continue.png</value>
+  </data>
+  <data name="MenuGameTitleFileName" xml:space="preserve">
+    <value>Resources\UltraFOxyChickenFlightX.png</value>
+  </data>
+  <data name="MenuNewGameFileName" xml:space="preserve">
+    <value>Resources\new_game.png</value>
+  </data>
+  <data name="MenuQuitFileName" xml:space="preserve">
+    <value>Resources\quit.png</value>
   </data>
 </root>
