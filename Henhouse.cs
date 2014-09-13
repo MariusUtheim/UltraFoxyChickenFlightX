@@ -3,7 +3,6 @@ using System;
 
 namespace Project1
 {
-#warning Inherit from GameObject?
     public class Henhouse : SceneryObject
     {
         public static readonly Sprite FileSprite = new Sprite(Properties.Resources.HenhouseFileName, origin: IntVector.Zero);
