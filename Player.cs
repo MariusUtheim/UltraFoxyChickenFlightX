@@ -11,6 +11,8 @@ namespace Project1
 		private static readonly Vector InitialFlappingSpeed = new Vector(0, -9);
 		private static readonly Vector FlappingSpeed = new Vector(0, -4);
 
+        private SoundInstance backgroundMusicInstance = Sounds.Background.Play(true, .5);
+
 		public Player(Point location)
 			: base(location)
 		{
@@ -19,7 +21,6 @@ namespace Project1
 			Transform.Scale *= 0.17;
 			Image.Speed = 0;
 			this.Mask.Rectangle(new IntRectangle(597, 681, 729 - 597, 1293 - 681) - Sprite.Origin.GetValueOrDefault());
-
 		}
 
 		public void OnGlobalMousePress(MouseButton button)
@@ -58,6 +59,15 @@ namespace Project1
 			Statistics.Score += StepScore;
 
 			Transform.Rotation = Angle.Deg(15 + 4 * GMath.Sin(Time.LoopCount * 0.1));
+
+            if (this.backgroundMusicInstance.Volume < 1)
+            {
+                this.backgroundMusicInstance.Volume += .1;
+            }
+            else if (this.backgroundMusicInstance.Volume > 1)
+            {
+                this.backgroundMusicInstance.Volume = 1;
+            }
 
 			base.OnStep();
 		}

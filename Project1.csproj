@@ -185,7 +185,9 @@
     <None Include="Resources\englesky.ogg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\MenuSoundtrack.ogg" />
+    <None Include="Resources\MenuSoundtrack.ogg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\treffer grantre.ogg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

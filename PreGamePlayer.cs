@@ -33,7 +33,7 @@ namespace Project1
 				StartGame();
 		}
 
-		public void StartGame()
+        public void StartGame()
 		{
 			this.Destroy();
 			new Player(this.Location);

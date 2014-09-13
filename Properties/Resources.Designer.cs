@@ -214,7 +214,7 @@ namespace Project1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resources\MainMenuSoundtrack.ogg.
+        ///   Looks up a localized string similar to Resources\MenuSoundtrack.ogg.
         /// </summary>
         internal static string MainMenuSoundName {
             get {
