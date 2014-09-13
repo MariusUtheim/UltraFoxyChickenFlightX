@@ -7,11 +7,11 @@ namespace Project1
     {
 
         public PreGamePlayer()
-            : base(350, 268)
+            : base(350, 253)
         {
 			Image.Alpha = 0;
 			Depth = -2;
-			Transform.Scale *= 0.1;
+			Transform.Scale *= 0.17;
 			Sprite = Sprites.FoxyStand;
         }
 

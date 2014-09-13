@@ -13,7 +13,7 @@ namespace Project1
 		{
 			Sprite = Sprites.AngryCloud;
 			Transform.Scale *= 0.2;
-            this.Mask.Rectangle(245, 250, 754 - 245, 612 - 250);
+            this.Mask.Rectangle(new IntRectangle(245, 250, 754 - 245, 612 - 250) - Sprite.Origin.GetValueOrDefault());
 		}
 
         public override void OnCollision(Player other)
