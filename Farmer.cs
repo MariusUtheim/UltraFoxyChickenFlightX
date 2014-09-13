@@ -13,7 +13,7 @@ namespace Project1
             this.Depth = -1;
             this.Sprite = FileSprite;
             this.Transform.Scale *= .1;
-            this.Y = Window.Height - this.Image.Height + 18;
+            this.Y = Window.Height - this.Image.Height - 50;
 
             this.Mask.Rectangle(80, 90, 1190-80, this.Sprite.Height - 90);
         }

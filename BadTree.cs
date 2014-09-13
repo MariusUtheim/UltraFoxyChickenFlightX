@@ -6,10 +6,10 @@ namespace Project1
     public class BadTree : SceneryObject
     {
 
-		public BadTree() : base(Room.Width + 50, 520)
+		public BadTree() : base(Room.Width + 50, 380)
 		{
             this.Sprite = Sprites.BadTree;
-            this.Transform.Scale *= .3;
+            this.Transform.Scale *= .275;
             this.Mask.Rectangle(350, 333, 485 - 350, this.Sprite.Height - 333);
         }
 

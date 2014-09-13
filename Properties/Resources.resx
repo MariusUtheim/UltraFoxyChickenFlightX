@@ -145,10 +145,10 @@
     <value>Resources\epletre.png</value>
   </data>
   <data name="HappyCloudFileName1" xml:space="preserve">
-    <value>Resources\happycloud.png</value>
+    <value>Resources\happycloud1.png</value>
   </data>
   <data name="HappyCloudFileName2" xml:space="preserve">
-    <value>Resources\happycloud_2.png</value>
+    <value>Resources\happycloud2.png</value>
   </data>
   <data name="HappyCloudSoundName" xml:space="preserve">
     <value>Resources\englesky.ogg</value>
@@ -173,5 +173,11 @@
   </data>
   <data name="MenuQuitFileName" xml:space="preserve">
     <value>Resources\quit.png</value>
+  </data>
+  <data name="BadTreeSoundName" xml:space="preserve">
+    <value>Resources\treffer grantre.ogg</value>
+  </data>
+  <data name="FoxyStandingFileName" xml:space="preserve">
+    <value>Resources\foxystanding.png</value>
   </data>
 </root>
