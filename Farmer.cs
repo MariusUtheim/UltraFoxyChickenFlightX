@@ -8,12 +8,12 @@ namespace Project1
         public static readonly Sprite FileSprite = new Sprite(Properties.Resources.FarmerFileName, origin: IntVector.Zero);
 
         public Farmer()
-            : base(Instance<Player>.First().Location.X - 20, 0)
+            : base(Instance<Player>.First().Location.X - 50, 0)
         {
             this.Depth = -1;
             this.Sprite = FileSprite;
-            this.Transform.Scale *= .075;
-            this.Y = Window.Height - this.Image.Height - 20;
+            this.Transform.Scale *= .1;
+            this.Y = Window.Height - this.Image.Height + 15;
 
             this.Mask.Rectangle(80, 90, 1190-80, this.Sprite.Height - 90);
         }
