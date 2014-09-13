@@ -189,4 +189,7 @@
   <data name="BackgroundMusicFileName" xml:space="preserve">
     <value>Resources\backgroundmusic.ogg</value>
   </data>
+  <data name="ChickenRustleMusicFIleName" xml:space="preserve">
+    <value>Resources\chicken house rustle.ogg</value>
+  </data>
 </root>

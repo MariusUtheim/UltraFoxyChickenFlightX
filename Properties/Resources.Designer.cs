@@ -124,6 +124,15 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\chicken house rustle.ogg.
+        /// </summary>
+        internal static string ChickenRustleMusicFIleName {
+            get {
+                return ResourceManager.GetString("ChickenRustleMusicFIleName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\farmer.png.
         /// </summary>
         internal static string FarmerFileName {

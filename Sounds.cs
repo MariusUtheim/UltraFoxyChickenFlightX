@@ -20,5 +20,6 @@ namespace Project1
         public static Sound BadTree = new Sound(Properties.Resources.BadTreeSoundName, true);
         public static Sound MainMenu = new Sound(Properties.Resources.MainMenuSoundName, true);
         public static Sound Background = new Sound(Properties.Resources.BackgroundMusicFileName, true);
+        public static Sound ChickenRustle = new Sound(Properties.Resources.ChickenRustleMusicFIleName, true);
 	}
 }
