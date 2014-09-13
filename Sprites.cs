@@ -20,8 +20,9 @@ namespace Project1
 		public static readonly Sprite AngryCloudSuperAngry = new Sprite(Properties.Resources.AngryCloudFileName2, origin: IntVector.Zero);
 		public static readonly Sprite GoodTree = new Sprite(Properties.Resources.GoodTreeSpriteFileName, origin: IntVector.Zero);
 		public static readonly Sprite BadTree = new Sprite(Properties.Resources.BadTreeSpriteFileName, origin: IntVector.Zero);
-		public static readonly Sprite FoxyHappy = new Sprite(Properties.Resources.FoxyHappyFileName, subimages: 2, origin: IntVector.Zero);
-		public static readonly Sprite FoxyScared = new Sprite(Properties.Resources.FoxyScaredFileName, subimages: 2, origin: IntVector.Zero);
+		public static readonly Sprite FoxyHappy = new Sprite(Properties.Resources.FoxyHappyFileName, subimages: 2);
+		public static readonly Sprite FoxyScared = new Sprite(Properties.Resources.FoxyScaredFileName, subimages: 2);
+		public static readonly Sprite FoxyStand = new Sprite(Properties.Resources.FoxyStandingFileName, subimages: 1);
         
 
 	}

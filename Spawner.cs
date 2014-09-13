@@ -28,6 +28,7 @@ namespace Project1
 		{
 			if (!isActive)
 				return;
+			isActive = false;
 			GlobalEvent.Step -= moveBackground;
 			spawnAlarm.Stop();
 		}

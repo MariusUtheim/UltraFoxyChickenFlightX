@@ -10,7 +10,7 @@ namespace Project1
             Statistics.EnergyChanged += OnStatisticsChanged;
             Statistics.ScoreChanged += OnStatisticsChanged;
 
-            var gameroom = new Room(1024, 768);
+            var gameroom = new Room(1280, 800);
             Game.Run(gameroom, gameStart: GameStartup);
 
             return 0;
