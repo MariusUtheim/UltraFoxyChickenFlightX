@@ -7,6 +7,8 @@ namespace Project1
     {
         public static readonly Sprite GoodTreeSprite = new Sprite(Properties.Resources.GoodTreeSpriteFileName, origin: IntVector.Zero);
 
+		public GoodTree() : base(Room.Width + 50, 520) { }
+
         public GoodTree(double x, double y) : base(x, y) { }
 
         public GoodTree(Point location) : base(location) { }
