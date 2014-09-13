@@ -8,7 +8,7 @@ namespace Project1
         public Henhouse Henhouse { get; set; }
 
         public PreGamePlayer(Henhouse henhouse)
-            : base(150, 250)
+            : base(200, 250)
         {
             this.Henhouse = henhouse;
         }
