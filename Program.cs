@@ -15,11 +15,8 @@ namespace Project1
 
         static void GameStartup()
         {
-            var henhouse = new Henhouse(5, Window.Height);
-            henhouse.Y -= henhouse.Image.Height;
-            var p = new Player(henhouse.Location.X + henhouse.Image.Width - Player.Radius, henhouse.Location.Y - Player.Radius);
-            var bt = new BadTree(henhouse.Image.Width + 150, Window.Height);
-			bt.Y = Window.Height - bt.Image.Height;
+            var p = new Player(250, 400);
+            
         }
     }
 }
