@@ -28,7 +28,7 @@ namespace Project1
             set
             {
                 int oldEngery = energy;
-                energy = GMath.Max(value, 0);
+                energy = GMath.Median(0, value, 100);
                 if (value != oldEngery && EnergyChanged != null)
                 {
                     EnergyChanged(value);

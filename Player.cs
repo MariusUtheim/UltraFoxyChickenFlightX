@@ -3,7 +3,7 @@ using System;
 
 namespace Project1
 {
-    public class Player : MovingObject, IGlobalMousePressListener
+    public class Player : MovingObject, IGlobalMousePressListener, IKeyPressListener
     {
         public const int Radius = 15;
         private const int FlappingCost = 2;
@@ -35,15 +35,24 @@ namespace Project1
 
         public void OnGlobalMousePress(MouseButton button)
         {
-            if (button == MouseButton.Left)
-            {
-                if (Statistics.Energy > FlappingCost)
-                {
-                    this.Velocity += FlappingSpeed;
-                    Statistics.Energy -= FlappingCost;
-                }
-            }
+			if (button == MouseButton.Left)
+				Flap();
         }
+
+		public void OnKeyPress(Key key)
+		{
+			if (key == Key.Space)
+				Flap();
+		}
+
+		public void Flap()
+		{
+			if (Statistics.Energy > 0)
+			{
+				this.Velocity += FlappingSpeed;
+				Statistics.Energy -= FlappingCost;
+			}
+		}
 
         public override void OnStep()
         {
