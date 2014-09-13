@@ -23,7 +23,8 @@ namespace Project1
             this.Init();
         }
 
-        public Player(Point location) : base(location)
+        public Player(Point location)
+            : base(location)
         {
             this.Init();
         }
@@ -55,9 +56,11 @@ namespace Project1
         public override void OnStep()
         {
             if (this.IsStarted)
+            {
                 this.Velocity += GravitySpeed;
 
-            Statistics.Score += StepScore;
+                Statistics.Score += StepScore;
+            }
 
             base.OnStep();
         }
@@ -77,7 +80,7 @@ namespace Project1
 
         public override void OnDestroy()
         {
-			Game.Sleep(1200);
+            Game.Sleep(1200);
             Game.Quit();
         }
 
