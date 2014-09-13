@@ -3,7 +3,7 @@ using System;
 
 namespace Project1
 {
-    public class Henhouse : GameObject
+    public class Henhouse : SceneryObject
     {
         public static readonly IntVector Size = new IntVector(180, 220);
 
