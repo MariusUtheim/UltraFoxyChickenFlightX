@@ -159,4 +159,7 @@
   <data name="NumbersSpriteFileName" xml:space="preserve">
     <value>Resources\0_9.png</value>
   </data>
+  <data name="AngryCloudSoundName" xml:space="preserve">
+    <value>Resources\</value>
+  </data>
 </root>
