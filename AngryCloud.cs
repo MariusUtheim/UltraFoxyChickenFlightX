@@ -14,7 +14,7 @@ namespace Project1
             this.Sprite = AngryCloudSprite;
             this.Transform.XScale = .2;
             this.Transform.YScale = .2;
-            this.Mask.Rectangle(237, 250 , 780 - 237, this.Sprite.Height. - 250 );
+            this.Mask.Rectangle(237, 250 , 780 - 237, this.Sprite.Height - 250 );
         }
     }
 }
