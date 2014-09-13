@@ -56,6 +56,14 @@ namespace Project1
             base.OnStep();
         }
 
+        public override void OnEndStep()
+        {
+            if (this.Y + Radius >= Window.Height)
+            {
+                this.Destroy();
+            }
+        }
+
         public override void OnDraw()
         {
             Fill.Circle(Color.Red, this.Location, Radius);
