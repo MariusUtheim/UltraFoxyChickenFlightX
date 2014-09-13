@@ -3,9 +3,11 @@ using System;
 
 namespace Project1
 {
-    public class Player : MovingObject, IGlobalMousePressListener, ICollisionListener<BadTree>
+    public class Player : MovingObject, IGlobalMousePressListener, ICollisionListener<BadTree>, ICollisionListener<AngryCloud>, ICollisionListener<HappyCloud>, ICollisionListener<GoodTree>
     {
         public const int Radius = 15;
+        private const int FlappingCost = 1;
+        private const int StepScore = 1;
         private static readonly Vector GravitySpeed = new Vector(0, 0.25);
         private static readonly Vector InitialFlappingSpeed = new Vector(0, -6);
         private static readonly Vector FlappingSpeed = new Vector(0, -3);
@@ -29,6 +31,16 @@ namespace Project1
         private void Init()
         {
             this.Mask.Circle(Radius);
+
+            Statistics.EnergyChanged += OnEnergyChanged;
+        }
+
+        private void OnEnergyChanged(int value)
+        {
+            if (value <= 0)
+            {
+                this.Destroy();
+            }
         }
 
         public void OnGlobalMousePress(MouseButton button)
@@ -45,6 +57,8 @@ namespace Project1
                 {
                     this.Velocity += FlappingSpeed;
                 }
+
+                Statistics.Energy -= FlappingCost;
             }
         }
 
@@ -52,6 +66,8 @@ namespace Project1
         {
             if (this.IsStarted)
                 this.Velocity += GravitySpeed;
+
+            Statistics.Score += StepScore;
 
             base.OnStep();
         }
@@ -78,6 +94,21 @@ namespace Project1
         public void OnCollision(BadTree badTree)
         {
             this.Destroy();
+        }
+
+        public void OnCollision(AngryCloud angryCloud)
+        {
+            Statistics.Score -= AngryCloud.ScorePenalty;
+        }
+
+        public void OnCollision(HappyCloud happyCloud)
+        {
+            Statistics.Score += HappyCloud.ScoreAward;
+        }
+
+        public void OnCollision(GoodTree other)
+        {
+            throw new NotImplementedException();
         }
     }
 }

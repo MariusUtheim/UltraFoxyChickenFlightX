@@ -71,6 +71,7 @@
     <Compile Include="AngryCloud.cs" />
     <Compile Include="BadTree.cs" />
     <Compile Include="GoodTree.cs" />
+    <Compile Include="HappyCloud.cs" />
     <Compile Include="Henhouse.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
@@ -82,6 +83,7 @@
     </Compile>
     <Compile Include="SceneryObject.cs" />
     <Compile Include="Spawner.cs" />
+    <Compile Include="Statistics.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="GameMaker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
