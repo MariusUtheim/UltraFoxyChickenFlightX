@@ -15,10 +15,10 @@ namespace Project1
 
         static void GameStartup()
         {
-            var henhouse = new Henhouse(5, Window.Height - Henhouse.Size.Y);
-            var p = new Player(henhouse.Location.X + Henhouse.Size.X - Player.Radius, henhouse.Location.Y - Player.Radius);
-            var bt = new BadTree(Henhouse.Size.X + 150, Window.Height);
-			bt.Y = Window.Height - bt.Image.Height;
+			GlobalEvent.ExitOnEscape = true;
+
+            var p = new Player(250, 400);
+			Spawner.Activate();
         }
     }
 }

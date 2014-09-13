@@ -95,5 +95,14 @@ namespace Project1.Properties {
                 return ResourceManager.GetString("HappyCloudFileName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources\henhouse.png.
+        /// </summary>
+        internal static string HenhouseFileName {
+            get {
+                return ResourceManager.GetString("HenhouseFileName", resourceCulture);
+            }
+        }
     }
 }

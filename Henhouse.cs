@@ -5,14 +5,15 @@ namespace Project1
 {
     public class Henhouse : SceneryObject
     {
-        public static readonly IntVector Size = new IntVector(180, 220);
+        public static readonly Sprite FileSprite = new Sprite(Properties.Resources.HenhouseFileName, origin: IntVector.Zero);
 
         public Henhouse(double x, double y) : base(x, y) { }
         public Henhouse(Point location) : base(location) { }
 
-        public override void OnDraw()
+        protected override void Init()
         {
-            Fill.Rectangle(Color.Brown, new Rectangle(this.Location, Size));
+            this.Sprite = FileSprite;
+            this.Transform.Scale *= .4;
         }
     }
 }
