@@ -27,6 +27,7 @@ namespace Project1
         {
 			GlobalEvent.ExitOnEscape = true;
 			Sprites.LoadAll();
+			Sounds.LoadAll();
 
 			Spawner.Activate();
 
