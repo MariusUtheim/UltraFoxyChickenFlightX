@@ -15,8 +15,10 @@ namespace Project1
 
         static void GameStartup()
         {
+			GlobalEvent.ExitOnEscape = true;
+
             var p = new Player(250, 400);
-            
+			Spawner.Activate();
         }
     }
 }
