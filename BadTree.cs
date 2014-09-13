@@ -3,21 +3,14 @@ using System;
 
 namespace Project1
 {
-    public class BadTree : GameObject
+    public class BadTree : SceneryObject
     {
         public static readonly Sprite BadTreeSprite = new Sprite(Properties.Resources.BadTreeSpriteFileName, origin: IntVector.Zero);
 
-        public BadTree(double x, double y) : base(x, y) 
-        {
-            this.Init();
-        }
+        public BadTree(double x, double y) : base(x, y) { }
+        public BadTree(Point location) : base(location) { }
 
-        public BadTree(Point location) : base(location)
-        {
-            this.Init();
-        }
-
-        private void Init()
+        protected override void Init()
         {
             this.Sprite = BadTreeSprite;
             this.Transform.XScale = .2;
