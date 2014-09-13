@@ -7,16 +7,18 @@ namespace Project1
     {
 
         public PreGamePlayer()
-            : base(350, 250)
+            : base(350, 268)
         {
-			Image.Blend = Color.Red;
 			Image.Alpha = 0;
+			Depth = -2;
+			Transform.Scale *= 0.1;
+			Sprite = Sprites.FoxyStand;
         }
 
         public override void OnStep()
         {
 			if (Image.Alpha < 1.0)
-				Image.Alpha += 0.01;
+				Image.Alpha += 0.05;
         }
 
 		public void OnKeyPress(Key key)
@@ -38,11 +40,7 @@ namespace Project1
 //			new Farmer();
 			Instance<Henhouse>.First().Velocity = SceneryObject.MovementSpeed;
 			Spawner.Activate();
-		}
-
-		public override void OnDraw()
-		{
-			Fill.Circle(Image.Blend, Location, 30);
+			GUI.Init();
 		}
 	}
 }

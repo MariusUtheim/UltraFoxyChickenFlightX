@@ -17,7 +17,7 @@ namespace Project1
 
 		public override void OnStep()
 		{
-			Image.Alpha += 0.01;
+			Image.Alpha += 0.05;
 			if (BoundingBox.Right < 0)
 				this.Destroy();
 		}

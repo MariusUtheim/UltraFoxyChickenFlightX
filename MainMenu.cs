@@ -10,12 +10,15 @@ namespace Project1
 	public class MainMenu : GameObject, IGlobalMousePressListener
 	{
 		bool isFadingOut = false;
+		double tweenAmount;
 
 		public MainMenu()
 			: base(0, 0)
 		{
-#if false
+#if true
 			Spawner.Activate();
+			Depth = -1;
+			tweenAmount = 0.0;
 #else
 			new Player(new Point(350, 250));
 			Spawner.Activate();
@@ -28,7 +31,8 @@ namespace Project1
 		{
 			if (isFadingOut)
 			{
-				Image.Alpha -= 0.01;
+				tweenAmount += 0.01;
+				Image.Alpha = (1 + Math.Cos(tweenAmount * GMath.Tau / 2)) / 2;
 				Instance<SceneryObject>.Do(inst => inst.Image.Alpha = this.Image.Alpha);
 				if (Image.Alpha <= 0)
 				{
@@ -43,6 +47,13 @@ namespace Project1
 		{
 			Spawner.Deactivate();
 			isFadingOut = true;
+		}
+
+		public override void OnDraw()
+		{
+			Fill.Rectangle(new Color((int)(64 * Image.Alpha), 40, 40, 80), 0, 0, Room.Width, Room.Height);
+			Fill.Rectangle(Color.Black, 0, 0, Room.Width, Room.Height / 10 * Image.Alpha);
+			Fill.Rectangle(Color.Black, 0, Room.Height * (10 - Image.Alpha) / 10, Room.Width, Room.Height / 10 * Image.Alpha);
 		}
 	}
 }
