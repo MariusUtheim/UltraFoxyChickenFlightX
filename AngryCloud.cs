@@ -13,7 +13,6 @@ namespace Project1
 			Sprite = AngryCloudSprite;
 			Transform.Scale *= 0.2;
 		}
-        public AngryCloud(double x, double y) : base(x, y) { }
-        public AngryCloud(Point location) : base(location) { }
+
     }
 }

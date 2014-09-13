@@ -9,17 +9,7 @@ namespace Project1
 
         public SceneryObject(double x, double y) : base(x, y) 
         {
-            this.Init();
-        }
-
-        public SceneryObject(Point location) : base(location)
-        {
-            this.Init();
-        }
-
-        protected virtual void Init()
-        {
-            this.Velocity = MovementSpeed;
+			this.Velocity = MovementSpeed;
         }
 
         public override void OnEndStep()

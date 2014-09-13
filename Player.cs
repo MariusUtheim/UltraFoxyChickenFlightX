@@ -83,6 +83,7 @@ namespace Project1
         public override void OnDraw()
         {
             Fill.Circle(Color.Red, this.Location, Radius);
+
         }
 
         public override void OnDestroy()

@@ -7,10 +7,7 @@ namespace Project1
     {
         public static readonly Sprite FileSprite = new Sprite(Properties.Resources.HenhouseFileName, origin: IntVector.Zero);
 
-        public Henhouse(double x, double y) : base(x, y) { }
-        public Henhouse(Point location) : base(location) { }
-
-        protected override void Init()
+        public Henhouse(double x, double y) : base(x, y) 
         {
             this.Sprite = FileSprite;
             this.Transform.Scale *= .4;

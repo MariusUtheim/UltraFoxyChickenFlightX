@@ -14,15 +14,25 @@ namespace Project1
 
 		public static void Activate()
 		{
+			if (isActive)
+				return;
+
 			isActive = true;
 			spawnAlarm = Alarm.Start(60, spawnObject);
 			spawnAlarm.IsLooping = true;
 		}
 
+		private static void Deactivate()
+		{
+			if (!isActive)
+				return;
+
+			spawnAlarm.Stop();
+		}
+
 		static void spawnObject(Alarm alarm)
 		{
 			Activator.CreateInstance(GRandom.Choose(typeof(BadTree), typeof(GoodTree), typeof(AngryCloud)));
-			
 		}
 	}
 }
