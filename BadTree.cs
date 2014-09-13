@@ -16,6 +16,7 @@ namespace Project1
 		public override void OnCollision(Player player)
 		{
 			player.Destroy();
+            Sounds.BadTree.Play();
 		}
     }
 }
