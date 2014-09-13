@@ -6,7 +6,7 @@ namespace Project1
     public class PreGamePlayer : GameObject, IKeyPressListener, IGlobalMousePressListener
     {
 
-        public PreGamePlayer(Henhouse henhouse)
+        public PreGamePlayer()
             : base(350, 250)
         {
 			Image.Blend = Color.Red;
@@ -35,9 +35,9 @@ namespace Project1
 		{
 			this.Destroy();
 			new Player(this.Location);
-			new Farmer();
+//			new Farmer();
+			Instance<Henhouse>.First().Velocity = SceneryObject.MovementSpeed;
 			Spawner.Activate();
-			GlobalEvent.Step += () => { Background.Offset += SceneryObject.MovementSpeed / 4; };
 		}
 
 		public override void OnDraw()

@@ -3,11 +3,11 @@ using System;
 
 namespace Project1
 {
-    public class Henhouse : SceneryObject
+    public class Henhouse : MovingObject
     {
         public static readonly Sprite FileSprite = new Sprite(Properties.Resources.HenhouseFileName, origin: IntVector.Zero);
 
-        public Henhouse(double x, double y) : base(x, y) 
+        public Henhouse() : base(20, 200) 
         {
             this.Sprite = FileSprite;
             this.Transform.Scale *= .4;
@@ -18,11 +18,8 @@ namespace Project1
 		public override void OnStep()
 		{
 			Image.Alpha += 0.01;
-		}
-
-		public override void OnCollision(Player player)
-		{
-			return;
+			if (BoundingBox.Right < 0)
+				this.Destroy();
 		}
     }
 }

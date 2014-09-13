@@ -14,9 +14,9 @@ namespace Project1
 			return; // Initializes the files through lazy loading.
 		}
 
-		public static Sound HappyCloud = new Sound(Properties.Resources.HappyCloudSoundName, true
-        public static Sound AngryCloud = new Sound(Properties.Resources.)
-        public static Sound GoodTree = new Sound(Properties.Resources.GoodTreeSoundName. true);
+		public static Sound HappyCloud = new Sound(Properties.Resources.HappyCloudSoundName, true);
+		public static Sound AngryCloud = new Sound(Properties.Resources.AngryCloudSoundName, true);
+        public static Sound GoodTree = new Sound(Properties.Resources.GoodTreeSoundName, true);
 
 	}
 }

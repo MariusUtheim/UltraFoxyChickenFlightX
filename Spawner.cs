@@ -21,19 +21,26 @@ namespace Project1
 
 			spawnAlarm = Alarm.Start(60, spawnObject);
 			spawnAlarm.IsLooping = true;
+			GlobalEvent.Step += moveBackground;
 		}
 
 		public static void Deactivate()
 		{
 			if (!isActive)
 				return;
-
+			GlobalEvent.Step -= moveBackground;
 			spawnAlarm.Stop();
 		}
 
-		static void spawnObject(Alarm alarm)
+		private static void spawnObject(Alarm alarm)
 		{
 			Activator.CreateInstance(GRandom.Choose(typeof(BadTree), typeof(GoodTree), typeof(AngryCloud), typeof(HappyCloud)));
 		}
+
+		private static void moveBackground()
+		{
+			Background.Offset += SceneryObject.MovementSpeed / 4;
+		}
+
 	}
 }

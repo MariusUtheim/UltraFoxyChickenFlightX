@@ -11,23 +11,13 @@ namespace Project1
         private static readonly Vector InitialFlappingSpeed = new Vector(0, -6);
         private static readonly Vector FlappingSpeed = new Vector(0, -4);
 
-        public Player(double x, double y)
-            : base(x, y)
-        {
-            this.Init();
-        }
-
         public Player(Point location)
             : base(location)
         {
-            this.Init();
-        }
-
-        private void Init()
-        {
-            this.Velocity += InitialFlappingSpeed;
-
-        }
+			this.Velocity = InitialFlappingSpeed;
+			Sprite = Sprites.FoxyHappy;
+			Transform.Scale *= 0.1;
+		}
 
         public void OnGlobalMousePress(MouseButton button)
         {
