@@ -63,7 +63,8 @@ namespace Project1
 
         public override void OnDestroy()
         {
-			Game.Sleep(500);
+			Game.Sleep(1200);
+            Game.Quit();
         }
 
         public void OnCollision(BadTree badTree)
