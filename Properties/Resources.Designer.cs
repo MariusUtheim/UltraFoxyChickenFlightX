@@ -248,5 +248,14 @@ namespace Project1.Properties {
                 return ResourceManager.GetString("NumbersSpriteFileName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources\wind.ogg.
+        /// </summary>
+        internal static string WindFileName {
+            get {
+                return ResourceManager.GetString("WindFileName", resourceCulture);
+            }
+        }
     }
 }
