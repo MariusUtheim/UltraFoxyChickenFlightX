@@ -132,6 +132,9 @@
   <data name="FarmerFileName" xml:space="preserve">
     <value>Resources\farmer.png</value>
   </data>
+  <data name="GoodTreeSoundName" xml:space="preserve">
+    <value>Resources\85581__jankoehl__hit-bush01.ogg</value>
+  </data>
   <data name="FoxyHappyFileName" xml:space="preserve">
     <value>Resources\foxyhappy.png</value>
   </data>
@@ -154,6 +157,6 @@
     <value>Resources\henhouse.png</value>
   </data>
   <data name="NumbersSpriteFileName" xml:space="preserve">
-    <value>Resources\0 to 9.png</value>
+    <value>Resources\0_9.png</value>
   </data>
 </root>

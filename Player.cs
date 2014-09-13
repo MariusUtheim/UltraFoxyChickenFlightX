@@ -34,30 +34,30 @@ namespace Project1
 
         public void OnGlobalMousePress(MouseButton button)
         {
-            if (button == MouseButton.Left)
-                Flap();
+			if (button == MouseButton.Left)
+				Flap();
         }
 
-        public void OnKeyPress(Key key)
-        {
-            if (key == Key.Space)
-                Flap();
-        }
+		public void OnKeyPress(Key key)
+		{
+			if (key == Key.Space)
+				Flap();
+		}
 
-        public void Flap()
-        {
-            if (Statistics.Energy > 0)
-            {
-                this.Velocity += FlappingSpeed;
-                Statistics.Energy -= FlappingCost;
-            }
-        }
+		public void Flap()
+		{
+			if (Statistics.Energy > 0)
+			{
+				this.Velocity += FlappingSpeed;
+				Statistics.Energy -= FlappingCost;
+			}
+		}
 
         public override void OnStep()
         {
-            this.Velocity += GravitySpeed;
+                this.Velocity += GravitySpeed;
 
-            Statistics.Score += StepScore;
+                Statistics.Score += StepScore;
 
             base.OnStep();
         }
@@ -67,5 +67,5 @@ namespace Project1
             Game.Sleep(1200);
             Game.Quit();
         }
-    }
+	}
 }

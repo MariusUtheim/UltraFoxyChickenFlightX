@@ -26,6 +26,8 @@ namespace Project1
         static void GameStartup()
         {
 			GlobalEvent.ExitOnEscape = true;
+			Sprites.LoadAll();
+			Sounds.LoadAll();
 
 			Spawner.Activate();
 
@@ -42,7 +44,7 @@ namespace Project1
 
         private static void MoveBackground()
         {
-            Background.Offset += SceneryObject.MovementSpeed;
+            Background.Offset += SceneryObject.MovementSpeed / 4;
         }
     }
 }

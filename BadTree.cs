@@ -5,7 +5,6 @@ namespace Project1
 {
     public class BadTree : SceneryObject
     {
-        public static readonly Sprite BadTreeSprite = new Sprite(Properties.Resources.BadTreeSpriteFileName, origin: IntVector.Zero);
 
 		public BadTree() : base(Room.Width + 50, 520)
 		{
