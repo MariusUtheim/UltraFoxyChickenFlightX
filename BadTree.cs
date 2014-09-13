@@ -10,7 +10,7 @@ namespace Project1
 		public BadTree() : base(Room.Width + 50, 520)
 		{
             this.Sprite = BadTreeSprite;
-            this.Transform.Scale *= .2;
+            this.Transform.Scale *= .3;
             this.Mask.Rectangle(350, 333, 485 - 350, this.Sprite.Height - 333);
         }
 
