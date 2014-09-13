@@ -13,7 +13,7 @@ namespace Project1
 		{
 			this.Sprite = GoodTreeSprite;
 			this.Transform.Scale *= 0.2;
-			this.Mask.Rectangle(320, 260, 450 - 320, this.Sprite.Height - 260);
+			this.Mask.Rectangle(55, 66, 726 - 55, this.Sprite.Height - 66);
 		}
 
 		public override void OnCollision(Player player)

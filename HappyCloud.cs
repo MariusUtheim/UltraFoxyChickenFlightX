@@ -5,7 +5,7 @@ namespace Project1
 {
     public class HappyCloud : SceneryObject
     {
-        public static  Sound HappyCloudSound;// = new Sound(Properties.Resources.HappyCloudSoundName, false);
+        public static  Sound HappyCloudSound = new Sound(Properties.Resources.HappyCloudSoundName, true);
         public static readonly Sprite HappyCloudSprite1 = new Sprite(Properties.Resources.HappyCloudFileName1, origin: IntVector.Zero);
         public static readonly Sprite HappyCloudSprite2 = new Sprite(Properties.Resources.HappyCloudFileName2, origin: IntVector.Zero);
         public const int ScoreAward = 4;
@@ -17,7 +17,6 @@ namespace Project1
             this.Sprite = HappyCloudSprite1;
             this.Transform.Scale *= .2;
             this.Mask.Rectangle(126, 283, 528 - 126, this.Sprite.Height - 283);
-            HappyCloudSound = new Sound(Properties.Resources.HappyCloudSoundName);
         }
 
 		public override void OnCollision(Player player)
