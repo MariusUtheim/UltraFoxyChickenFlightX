@@ -18,6 +18,7 @@ namespace Project1
 			Sprite = Sprites.FoxyHappy;
 			Transform.Scale *= 0.1;
 			Image.Speed = 0;
+            this.Mask.Rectangle(597, 681, 729 - 597, 1293 - 681);
 		}
 
         public void OnGlobalMousePress(MouseButton button)
