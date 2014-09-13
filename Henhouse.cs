@@ -3,6 +3,7 @@ using System;
 
 namespace Project1
 {
+#warning Inherit from GameObject?
     public class Henhouse : SceneryObject
     {
         public static readonly Sprite FileSprite = new Sprite(Properties.Resources.HenhouseFileName, origin: IntVector.Zero);
@@ -12,5 +13,10 @@ namespace Project1
             this.Sprite = FileSprite;
             this.Transform.Scale *= .4;
         }
+
+		public override void OnCollision(Player player)
+		{
+			return;
+		}
     }
 }
