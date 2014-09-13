@@ -106,6 +106,15 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\85581__jankoehl__hit-bush01.ogg.
+        /// </summary>
+        internal static string GoodTreeSoundName {
+            get {
+                return ResourceManager.GetString("GoodTreeSoundName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\epletre.png.
         /// </summary>
         internal static string GoodTreeSpriteFileName {

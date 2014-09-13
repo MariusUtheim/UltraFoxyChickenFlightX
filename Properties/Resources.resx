@@ -132,6 +132,9 @@
   <data name="FarmerFileName" xml:space="preserve">
     <value>Resources\farmer.png</value>
   </data>
+  <data name="GoodTreeSoundName" xml:space="preserve">
+    <value>Resources\85581__jankoehl__hit-bush01.ogg</value>
+  </data>
   <data name="GoodTreeSpriteFileName" xml:space="preserve">
     <value>Resources\epletre.png</value>
   </data>
