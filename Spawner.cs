@@ -1,46 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using GameMaker;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameMaker;
 
 namespace Project1
 {
-	static class Spawner
-	{
-		private static bool isActive = false;
-		private static Alarm spawnAlarm;
+    static class Spawner
+    {
+        private static bool isActive = false;
+        private static Alarm spawnAlarm;
+        private static Type lastSpawnType = typeof(BadTree);
 
-		public static void Activate()
-		{
-			if (isActive)
-				return;
+        private static readonly Type[] spawnTypes = new Type[]
+        {
+            typeof(GoodTree), typeof(BadTree), typeof(AngryCloud), typeof(HappyCloud)
+        };
 
-			isActive = true;
+        public static void Activate()
+        {
+            if (isActive)
+                return;
 
-			spawnAlarm = Alarm.Start(60, spawnObject);
-			spawnAlarm.IsLooping = true;
-			GlobalEvent.Step += moveBackground;
-		}
+            isActive = true;
 
-		public static void Deactivate()
-		{
-			if (!isActive)
-				return;
-			GlobalEvent.Step -= moveBackground;
-			spawnAlarm.Stop();
-		}
+            spawnAlarm = Alarm.Start(60, spawnObject);
+            spawnAlarm.IsLooping = true;
+            GlobalEvent.Step += moveBackground;
+        }
 
-		private static void spawnObject(Alarm alarm)
-		{
-			Activator.CreateInstance(GRandom.Choose(typeof(BadTree), typeof(GoodTree), typeof(AngryCloud), typeof(HappyCloud)));
-		}
+        public static void Deactivate()
+        {
+            if (!isActive)
+                return;
+            GlobalEvent.Step -= moveBackground;
+            spawnAlarm.Stop();
+        }
 
-		private static void moveBackground()
-		{
-			Background.Offset += SceneryObject.MovementSpeed / 4;
-		}
+        private static void spawnObject(Alarm alarm)
+        {
+            var currentSpawnType = GRandom.Choose(spawnTypes.Except(new Type[] { lastSpawnType }).ToArray());
+            Activator.CreateInstance(currentSpawnType);
+            lastSpawnType = currentSpawnType;
+        }
 
-	}
+        private static void moveBackground()
+        {
+            Background.Offset += SceneryObject.MovementSpeed / 4;
+        }
+
+    }
 }
