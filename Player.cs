@@ -112,7 +112,6 @@ namespace Project1
 
         public void OnCollision(GoodTree other)
         {
-            throw new NotImplementedException();
         }
     }
 }
