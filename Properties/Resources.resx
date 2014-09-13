@@ -174,4 +174,7 @@
   <data name="MenuQuitFileName" xml:space="preserve">
     <value>Resources\quit.png</value>
   </data>
+  <data name="BadTreeSoundName" xml:space="preserve">
+    <value>Resources\treffer grantre.ogg</value>
+  </data>
 </root>

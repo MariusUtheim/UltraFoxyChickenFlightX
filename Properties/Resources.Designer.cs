@@ -97,6 +97,15 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\treffer grantre.ogg.
+        /// </summary>
+        internal static string BadTreeSoundName {
+            get {
+                return ResourceManager.GetString("BadTreeSoundName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\furutre.png.
         /// </summary>
         internal static string BadTreeSpriteFileName {
