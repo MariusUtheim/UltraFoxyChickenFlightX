@@ -3,7 +3,7 @@ using System;
 
 namespace Project1
 {
-    public class Player : MovingObject, IGlobalMousePressListener, ICollisionListener<BadTree>
+    public class Player : MovingObject, IGlobalMousePressListener, ICollisionListener<BadTree>, ICollisionListener<AngryCloud>
     {
         public const int Radius = 15;
         private static readonly Vector GravitySpeed = new Vector(0, 0.25);
@@ -78,6 +78,11 @@ namespace Project1
         public void OnCollision(BadTree badTree)
         {
             this.Destroy();
+        }
+
+        public void OnCollision(AngryCloud angryCloud)
+        {
+            
         }
     }
 }
