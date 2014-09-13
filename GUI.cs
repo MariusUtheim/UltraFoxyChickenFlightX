@@ -21,7 +21,7 @@ namespace Project1
 		{
 			Rectangle fullHealthRegion = new Rectangle(20, 20, 128, 20);
 			Rectangle currentHealthRegion = new Rectangle(20, 20, Statistics.Energy, 20);
-			Fill.Rectangle(Color.Red, Color.White, Color.LightBlue, Color.DarkRed, currentHealthRegion);
+            Fill.Rectangle(Color.Red, Color.Yellow, Color.Yellow, Color.Red, currentHealthRegion);
 			Draw.Rectangle(Color.Black, fullHealthRegion);
 
 			DrawString(20, 50, Statistics.Score.ToString());

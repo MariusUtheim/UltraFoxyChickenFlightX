@@ -15,7 +15,7 @@ namespace Project1
 		public MainMenu()
 			: base(0, 0)
 		{
-#if true
+#if false
 			Spawner.Activate();
 			Depth = -1;
 			tweenAmount = 0.0;

@@ -3,29 +3,30 @@ using System;
 
 namespace Project1
 {
-    public class Player : MovingObject, IGlobalMousePressListener, IKeyPressListener
-    {
-        private const int FlappingCost = 2;
-        private const int StepScore = 1;
-        private static readonly Vector GravitySpeed = new Vector(0, 0.25);
-        private static readonly Vector InitialFlappingSpeed = new Vector(0, -6);
-        private static readonly Vector FlappingSpeed = new Vector(0, -4);
+	public class Player : MovingObject, IGlobalMousePressListener, IKeyPressListener
+	{
+		private const int FlappingCost = 2;
+		private const int StepScore = 1;
+		private static readonly Vector GravitySpeed = new Vector(0, 0.25);
+		private static readonly Vector InitialFlappingSpeed = new Vector(0, -6);
+		private static readonly Vector FlappingSpeed = new Vector(0, -4);
 
-        public Player(Point location)
-            : base(location)
-        {
+		public Player(Point location)
+			: base(location)
+		{
 			this.Velocity = InitialFlappingSpeed;
 			Sprite = Sprites.FoxyHappy;
-			Transform.Scale *= 0.1;
+			Transform.Scale *= 0.17;
 			Image.Speed = 0;
-            this.Mask.Rectangle(597, 681, 729 - 597, 1293 - 681);
+			this.Mask.Rectangle(new IntRectangle(597, 681, 729 - 597, 1293 - 681) - Sprite.Origin.GetValueOrDefault());
+
 		}
 
-        public void OnGlobalMousePress(MouseButton button)
-        {
+		public void OnGlobalMousePress(MouseButton button)
+		{
 			if (button == MouseButton.Left)
 				Flap();
-        }
+		}
 
 		public void OnKeyPress(Key key)
 		{
@@ -42,27 +43,30 @@ namespace Project1
 			}
 		}
 
-        public override void OnEndStep()
-        {
-            if ((this.Y + this.Image.Height) >= Window.Height)
-            {
-                this.Destroy();
-            }
-        }
+		public override void OnEndStep()
+		{
+			if ((this.Y + this.Image.Height) >= Window.Height)
+			{
+				this.Destroy();
+			}
+		}
 
-        public override void OnStep()
-        {
-            this.Velocity += GravitySpeed;
+		public override void OnStep()
+		{
+			this.Velocity += GravitySpeed;
 
-            Statistics.Score += StepScore;
+			Statistics.Score += StepScore;
 
-            base.OnStep();
-        }
+			Transform.Rotation = Angle.Deg(15 + 4 * GMath.Sin(Time.LoopCount * 0.1));
 
-        public override void OnDestroy()
-        {
-            Game.Sleep(1200);
-            Game.Quit();
-        }
+			base.OnStep();
+		}
+
+		public override void OnDestroy()
+		{
+			Game.Sleep(1200);
+			Game.Quit();
+		}
+
 	}
 }
