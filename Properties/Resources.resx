@@ -138,6 +138,9 @@
   <data name="HappyCloudFileName2" xml:space="preserve">
     <value>Resources\happycloud_2.png</value>
   </data>
+  <data name="HappyCloudSoundName" xml:space="preserve">
+    <value>Resources\englesky.ogg</value>
+  </data>
   <data name="HenhouseFileName" xml:space="preserve">
     <value>Resources\henhouse.png</value>
   </data>
