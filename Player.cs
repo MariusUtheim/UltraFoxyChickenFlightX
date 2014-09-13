@@ -31,6 +31,16 @@ namespace Project1
         private void Init()
         {
             this.Mask.Circle(Radius);
+
+            Statistics.EnergyChanged += OnEnergyChanged;
+        }
+
+        private void OnEnergyChanged(int value)
+        {
+            if (value <= 0)
+            {
+                this.Destroy();
+            }
         }
 
         public void OnGlobalMousePress(MouseButton button)
