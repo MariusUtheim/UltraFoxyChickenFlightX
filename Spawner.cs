@@ -21,7 +21,8 @@ namespace Project1
 
 		static void spawnObject(Alarm alarm)
 		{
-			new BadTree(Room.Width + 50, 550);
+			Activator.CreateInstance(GRandom.Choose(typeof(BadTree), typeof(GoodTree), typeof(AngryCloud)));
+			
 		}
 	}
 }

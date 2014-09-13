@@ -5,8 +5,8 @@ namespace Project1
 {
     public static class Statistics
     {
-        private static int score;
-        private static int energy;
+        private static int score = 0;
+        private static int energy = 128;
 
         public static int Score
         {
