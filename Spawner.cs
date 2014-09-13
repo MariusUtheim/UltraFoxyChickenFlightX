@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using GameMaker;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameMaker;
 
 namespace Project1
 {
@@ -11,6 +8,12 @@ namespace Project1
 	{
 		private static bool isActive = false;
 		private static Alarm spawnAlarm;
+        private static Type lastSpawnType = typeof(BadTree);
+
+        private static readonly Type[] spawnTypes = new Type[]
+        {
+            typeof(GoodTree), typeof(BadTree), typeof(AngryCloud), typeof(HappyCloud)
+        };
 
 		public static void Activate()
 		{
@@ -35,7 +38,9 @@ namespace Project1
 
 		private static void spawnObject(Alarm alarm)
 		{
-			Activator.CreateInstance(GRandom.Choose(typeof(BadTree), typeof(GoodTree), typeof(AngryCloud), typeof(HappyCloud)));
+            var currentSpawnType = GRandom.Choose(spawnTypes.Except(new Type[] { lastSpawnType }).ToArray());
+            Activator.CreateInstance(currentSpawnType);
+            lastSpawnType = currentSpawnType;
 		}
 
 		private static void moveBackground()
