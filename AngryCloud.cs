@@ -5,8 +5,10 @@ namespace Project1
 {
     public class AngryCloud : SceneryObject
     {
-		public const int ScorePenalty = 5;
-		private static Sprite AngryCloudSprite = new Sprite(Properties.Resources.AngryCloudSpriteFileName, origin: IntVector.Zero);
+		public const int ScorePenalty = 4;
+        public const int EngeryPenalty = 32;
+		private static Sprite AngryCloudSprite = new Sprite(Properties.Resources.AngryCloudFileName, origin: IntVector.Zero);
+        private bool collision = false;
 
 		public AngryCloud() : base(Room.Width + 50, GRandom.Int(100, 300))
 		{
@@ -14,5 +16,10 @@ namespace Project1
 			Transform.Scale *= 0.2;
 		}
 
+		public bool HasCollided
+        {
+            get { return this.collision; }
+            set { this.collision = value; }
+        }
     }
 }

@@ -6,11 +6,11 @@ namespace Project1
     public class Player : MovingObject, IGlobalMousePressListener, ICollisionListener<BadTree>, ICollisionListener<AngryCloud>, ICollisionListener<HappyCloud>, ICollisionListener<GoodTree>
     {
         public const int Radius = 15;
-        private const int FlappingCost = 1;
+        private const int FlappingCost = 2;
         private const int StepScore = 1;
         private static readonly Vector GravitySpeed = new Vector(0, 0.25);
         private static readonly Vector InitialFlappingSpeed = new Vector(0, -6);
-        private static readonly Vector FlappingSpeed = new Vector(0, -3);
+        private static readonly Vector FlappingSpeed = new Vector(0, -4);
 
         public static int Diameter
         { get { return Radius * 2; } }
@@ -23,7 +23,8 @@ namespace Project1
             this.Init();
         }
 
-        public Player(Point location) : base(location)
+        public Player(Point location)
+            : base(location)
         {
             this.Init();
         }
@@ -31,43 +32,35 @@ namespace Project1
         private void Init()
         {
             this.Mask.Circle(Radius);
-
-            Statistics.EnergyChanged += OnEnergyChanged;
-        }
-
-        private void OnEnergyChanged(int value)
-        {
-            if (value <= 0)
-            {
-                this.Destroy();
-            }
         }
 
         public void OnGlobalMousePress(MouseButton button)
         {
             if (button == MouseButton.Left)
             {
-                // TODO: Implememt "flaksing" when left mouse button is hit
                 if (!(this.IsStarted))
                 {
                     this.Velocity += InitialFlappingSpeed;
                     this.IsStarted = true;
+                    Statistics.Energy -= FlappingCost;
                 }
-                else
+                else if (Statistics.Energy > FlappingCost)
                 {
                     this.Velocity += FlappingSpeed;
+                    Statistics.Energy -= FlappingCost;
                 }
 
-                Statistics.Energy -= FlappingCost;
             }
         }
 
         public override void OnStep()
         {
             if (this.IsStarted)
+            {
                 this.Velocity += GravitySpeed;
 
-            Statistics.Score += StepScore;
+                Statistics.Score += StepScore;
+            }
 
             base.OnStep();
         }
@@ -88,7 +81,7 @@ namespace Project1
 
         public override void OnDestroy()
         {
-			Game.Sleep(1200);
+            Game.Sleep(1200);
             Game.Quit();
         }
 
@@ -99,12 +92,22 @@ namespace Project1
 
         public void OnCollision(AngryCloud angryCloud)
         {
-            Statistics.Score -= AngryCloud.ScorePenalty;
+            if (!(angryCloud.HasCollided))
+            {
+                Statistics.Score -= AngryCloud.ScorePenalty;
+                Statistics.Energy -= AngryCloud.EngeryPenalty; 
+            }
+            angryCloud.HasCollided = true;
         }
 
         public void OnCollision(HappyCloud happyCloud)
         {
-            Statistics.Score += HappyCloud.ScoreAward;
+            if (!(happyCloud.HasCollided))
+            {
+                Statistics.Score += HappyCloud.ScoreAward;
+                Statistics.Energy += HappyCloud.EngeryAward; 
+            }
+            happyCloud.HasCollided = true;
         }
 
         public void OnCollision(GoodTree other)
