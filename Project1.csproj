@@ -71,6 +71,7 @@
     <Compile Include="AngryCloud.cs" />
     <Compile Include="BadTree.cs" />
     <Compile Include="GoodTree.cs" />
+    <Compile Include="HappyCloud.cs" />
     <Compile Include="Henhouse.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

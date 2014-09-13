@@ -16,7 +16,7 @@ namespace Project1
             this.Sprite = GoodTreeSprite;
             this.Transform.XScale = .2;
             this.Transform.YScale = .2;
-            this.Mask.Rectangle(320, 260, 450 - 320, this.BoundingBox.Height - 260);
+            this.Mask.Rectangle(320, 260, 450 - 320, this.Sprite.Height - 260);
         }
     }
 }
