@@ -26,6 +26,7 @@ namespace Project1
         static void GameStartup()
         {
 			GlobalEvent.ExitOnEscape = true;
+			Sprites.LoadAll();
 
 			Spawner.Activate();
 

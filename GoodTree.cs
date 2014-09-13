@@ -6,12 +6,11 @@ namespace Project1
     public class GoodTree : SceneryObject
     {
         public static readonly Vector BoostAward = new Vector(0, -10);
-        public static readonly Sprite GoodTreeSprite = new Sprite(Properties.Resources.GoodTreeSpriteFileName, origin: IntVector.Zero);
 
 		public GoodTree() 
 			: base(Room.Width + 50, 520)
 		{
-			this.Sprite = GoodTreeSprite;
+			this.Sprite = Sprites.GoodTree;
 			this.Transform.Scale *= 0.2;
 			this.Mask.Rectangle(55, 66, 726 - 55, this.Sprite.Height - 66);
 		}
