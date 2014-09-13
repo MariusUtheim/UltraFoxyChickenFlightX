@@ -12,6 +12,8 @@ namespace Project1
 		bool isFadingOut = false;
 		double tweenAmount;
 
+        SoundInstance menuSoundInstance = Sounds.MainMenu.Play(true, .8);
+
 		public MainMenu()
 			: base(0, 0)
 		{
@@ -55,5 +57,12 @@ namespace Project1
 			Fill.Rectangle(Color.Black, 0, 0, Room.Width, Room.Height / 10 * Image.Alpha);
 			Fill.Rectangle(Color.Black, 0, Room.Height * (10 - Image.Alpha) / 10, Room.Width, Room.Height / 10 * Image.Alpha);
 		}
+
+        public override void OnDestroy()
+        {
+            menuSoundInstance.Stop();
+            
+            base.OnDestroy();
+        }
 	}
 }
