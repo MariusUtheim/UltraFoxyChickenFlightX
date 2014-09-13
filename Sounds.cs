@@ -18,6 +18,7 @@ namespace Project1
         public static Sound AngryCloud = new Sound(Properties.Resources.AngryCloudSoundName, true);
         public static Sound GoodTree = new Sound(Properties.Resources.GoodTreeSoundName, true);
         public static Sound BadTree = new Sound(Properties.Resources.BadTreeSoundName, true);
+        public static Sound MainMenu = new Sound(Properties.Resources.MainMenuSoundName, true);
 
 	}
 }

@@ -205,6 +205,15 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\MainMenuSoundtrack.ogg.
+        /// </summary>
+        internal static string MainMenuSoundName {
+            get {
+                return ResourceManager.GetString("MainMenuSoundName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resouces\continue.png.
         /// </summary>
         internal static string MenuContinueFileName {
