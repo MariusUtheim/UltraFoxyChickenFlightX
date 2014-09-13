@@ -8,6 +8,7 @@ namespace Project1
 		public const int ScorePenalty = 4;
         public const int EngeryPenalty = 32;
 		private static Sprite AngryCloudSprite = new Sprite(Properties.Resources.AngryCloudFileName, origin: IntVector.Zero);
+        private bool collision = false;
 
 		public AngryCloud() : base(Room.Width + 50, GRandom.Int(100, 300))
 		{
@@ -16,5 +17,11 @@ namespace Project1
 		}
         public AngryCloud(double x, double y) : base(x, y) { }
         public AngryCloud(Point location) : base(location) { }
+
+        public bool HasCollided
+        {
+            get { return this.collision; }
+            set { this.collision = value; }
+        }
     }
 }

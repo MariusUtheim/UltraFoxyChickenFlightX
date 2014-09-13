@@ -8,6 +8,7 @@ namespace Project1
         public const int ScoreAward = 4;
         public const int EngeryAward = 32;
         public static readonly Sprite HappyCloudSprite = new Sprite(Properties.Resources.HappyCloudFileName, origin: IntVector.Zero);
+        private bool collision = false;
         public HappyCloud(double x, double y) : base(x, y) { }
         public HappyCloud(Point location) : base(location) { }
 
@@ -17,5 +18,12 @@ namespace Project1
             this.Transform.YScale = .2;
             this.Mask.Rectangle(126, 283, 528 - 126, this.Sprite.Height - 283);
         }
+
+        public bool HasCollided
+        {
+            get { return this.collision; }
+            set { this.collision = value; }
+        }
+
     }
 }

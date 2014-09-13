@@ -91,14 +91,22 @@ namespace Project1
 
         public void OnCollision(AngryCloud angryCloud)
         {
-            Statistics.Score -= AngryCloud.ScorePenalty;
-            Statistics.Energy -= AngryCloud.EngeryPenalty;
+            if (!(angryCloud.HasCollided))
+            {
+                Statistics.Score -= AngryCloud.ScorePenalty;
+                Statistics.Energy -= AngryCloud.EngeryPenalty; 
+            }
+            angryCloud.HasCollided = true;
         }
 
         public void OnCollision(HappyCloud happyCloud)
         {
-            Statistics.Score += HappyCloud.ScoreAward;
-            Statistics.Energy += HappyCloud.EngeryAward;
+            if (!(happyCloud.HasCollided))
+            {
+                Statistics.Score += HappyCloud.ScoreAward;
+                Statistics.Energy += HappyCloud.EngeryAward; 
+            }
+            happyCloud.HasCollided = true;
         }
 
         public void OnCollision(GoodTree other)
