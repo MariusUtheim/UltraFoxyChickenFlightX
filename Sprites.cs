@@ -14,10 +14,10 @@ namespace Project1
 			return; // Initializes the files through lazy loading.
 		}
 
-		public static readonly Sprite HappyCloud = new Sprite(Properties.Resources.HappyCloudFileName1, origin: IntVector.Zero);
-		public static readonly Sprite HappyCloudSuperHappy = new Sprite(Properties.Resources.HappyCloudFileName2, origin: IntVector.Zero);
-		public static readonly Sprite AngryCloud = new Sprite(Properties.Resources.AngryCloudFileName1, origin: IntVector.Zero);
-		public static readonly Sprite AngryCloudSuperAngry = new Sprite(Properties.Resources.AngryCloudFileName2, origin: IntVector.Zero);
+		public static readonly Sprite HappyCloud = new Sprite(Properties.Resources.HappyCloudFileName1);
+		public static readonly Sprite HappyCloudSuperHappy = new Sprite(Properties.Resources.HappyCloudFileName2);
+		public static readonly Sprite AngryCloud = new Sprite(Properties.Resources.AngryCloudFileName1);
+		public static readonly Sprite AngryCloudSuperAngry = new Sprite(Properties.Resources.AngryCloudFileName2);
 		public static readonly Sprite GoodTree = new Sprite(Properties.Resources.GoodTreeSpriteFileName, origin: new IntVector(400, 920));
 		public static readonly Sprite BadTree = new Sprite(Properties.Resources.BadTreeSpriteFileName, origin: new IntVector(430, 1100));
 		public static readonly Sprite FoxyHappy = new Sprite(Properties.Resources.FoxyHappyFileName, subimages: 2);
