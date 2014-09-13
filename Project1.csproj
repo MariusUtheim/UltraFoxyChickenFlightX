@@ -99,6 +99,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\0 to 9.png" />
     <Content Include="Resources\0.png" />
     <Content Include="Resources\1.png" />
     <Content Include="Resources\2.png" />
