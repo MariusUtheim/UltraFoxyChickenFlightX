@@ -56,9 +56,9 @@ namespace Project1
 
         public override void OnStep()
         {
-                this.Velocity += GravitySpeed;
+            this.Velocity += GravitySpeed;
 
-                Statistics.Score += StepScore;
+            Statistics.Score += StepScore;
 
             base.OnStep();
         }

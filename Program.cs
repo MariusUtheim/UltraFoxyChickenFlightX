@@ -42,7 +42,7 @@ namespace Project1
 
         private static void MoveBackground()
         {
-            Background.Offset += SceneryObject.MovementSpeed;
+            Background.Offset += SceneryObject.MovementSpeed / 4;
         }
     }
 }
