@@ -5,6 +5,7 @@ namespace Project1
 {
     public class GoodTree : SceneryObject
     {
+        public static readonly Vector BoostAward = new Vector(0, -8);
         public static readonly Sprite GoodTreeSprite = new Sprite(Properties.Resources.GoodTreeSpriteFileName, origin: IntVector.Zero);
 
 		public GoodTree() 
@@ -17,7 +18,11 @@ namespace Project1
 
 		public override void OnCollision(Player player)
 		{
-			throw new NotImplementedException();
+			if (!(this.HasCollided))
+            {
+                player.Velocity = BoostAward;
+            }
+            this.HasCollided = true;
 		}
     }
 }

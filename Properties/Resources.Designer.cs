@@ -63,9 +63,18 @@ namespace Project1.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Resources\angry cloud1.png.
         /// </summary>
-        internal static string AngryCloudFileName {
+        internal static string AngryCloudFileName1 {
             get {
-                return ResourceManager.GetString("AngryCloudFileName", resourceCulture);
+                return ResourceManager.GetString("AngryCloudFileName1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources\angry cloud2.png.
+        /// </summary>
+        internal static string AngryCloudFileName2 {
+            get {
+                return ResourceManager.GetString("AngryCloudFileName2", resourceCulture);
             }
         }
         

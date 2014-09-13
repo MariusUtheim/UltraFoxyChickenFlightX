@@ -15,8 +15,6 @@ namespace Project1
         public static int Diameter
         { get { return Radius * 2; } }
 
-        private bool IsStarted = false;
-
         public Player(double x, double y)
             : base(x, y)
         {
@@ -31,6 +29,7 @@ namespace Project1
 
         private void Init()
         {
+            this.Velocity += InitialFlappingSpeed;
             this.Mask.Circle(Radius);
         }
 
@@ -38,29 +37,19 @@ namespace Project1
         {
             if (button == MouseButton.Left)
             {
-                if (!(this.IsStarted))
-                {
-                    this.Velocity += InitialFlappingSpeed;
-                    this.IsStarted = true;
-                    Statistics.Energy -= FlappingCost;
-                }
-                else if (Statistics.Energy > 0)
+                if (Statistics.Energy > FlappingCost)
                 {
                     this.Velocity += FlappingSpeed;
                     Statistics.Energy -= FlappingCost;
                 }
-
             }
         }
 
         public override void OnStep()
         {
-            if (this.IsStarted)
-            {
                 this.Velocity += GravitySpeed;
 
                 Statistics.Score += StepScore;
-            }
 
             base.OnStep();
         }

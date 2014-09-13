@@ -27,8 +27,11 @@ namespace Project1
         {
 			GlobalEvent.ExitOnEscape = true;
 
-            var p = new Player(250, 400);
 			Spawner.Activate();
+
+            var henhs = new Henhouse(5, 0);
+            henhs.Y = Window.Height - henhs.Image.Height;
+            var p = new PreGamePlayer(henhs);			
 			GUI.Init();
         }
     }
