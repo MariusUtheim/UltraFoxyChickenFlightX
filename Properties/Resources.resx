@@ -123,6 +123,9 @@
   <data name="AngryCloudFileName2" xml:space="preserve">
     <value>Resources\angry cloud2.png</value>
   </data>
+  <data name="BackgroundFileName" xml:space="preserve">
+    <value>Resources\bg.png</value>
+  </data>
   <data name="BadTreeSpriteFileName" xml:space="preserve">
     <value>Resources\furutre.png</value>
   </data>

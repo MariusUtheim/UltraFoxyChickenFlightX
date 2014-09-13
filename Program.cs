@@ -29,6 +29,9 @@ namespace Project1
 
 			Spawner.Activate();
 
+            Background.Sprite = new Sprite(Properties.Resources.BackgroundFileName);
+            Background.IsTiled = true;
+
             var henhs = new Henhouse(5, 0);
             henhs.Y = Window.Height - henhs.Image.Height;
             var p = new PreGamePlayer(henhs);			
