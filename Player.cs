@@ -40,6 +40,14 @@ namespace Project1
 			}
 		}
 
+        public override void OnEndStep()
+        {
+            if ((this.Y + this.Image.Height) >= Window.Height)
+            {
+                this.Destroy();
+            }
+        }
+
         public override void OnStep()
         {
             this.Velocity += GravitySpeed;
