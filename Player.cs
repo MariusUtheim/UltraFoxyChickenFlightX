@@ -18,6 +18,16 @@ namespace Project1
         public Player(double x, double y)
             : base(x, y)
         {
+            this.Init();
+        }
+
+        public Player(Point location) : base(location)
+        {
+            this.Init();
+        }
+
+        private void Init()
+        {
             this.Mask.Circle(Radius);
         }
 

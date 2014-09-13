@@ -61,6 +61,15 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\angry cloud1.png.
+        /// </summary>
+        internal static string AngryCloudFileName {
+            get {
+                return ResourceManager.GetString("AngryCloudFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\furutre.png.
         /// </summary>
         internal static string BadTreeSpriteFileName {
@@ -75,6 +84,15 @@ namespace Project1.Properties {
         internal static string GoodTreeSpriteFileName {
             get {
                 return ResourceManager.GetString("GoodTreeSpriteFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources\happycloud.png.
+        /// </summary>
+        internal static string HappyCloudFileName {
+            get {
+                return ResourceManager.GetString("HappyCloudFileName", resourceCulture);
             }
         }
     }
