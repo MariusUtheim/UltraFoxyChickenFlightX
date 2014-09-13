@@ -31,7 +31,6 @@ namespace Project1
         {
             this.Velocity += InitialFlappingSpeed;
             this.Mask.Circle(Radius);
-            Spawner.Activate();
         }
 
         public void OnGlobalMousePress(MouseButton button)
