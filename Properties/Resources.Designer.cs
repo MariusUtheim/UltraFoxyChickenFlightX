@@ -108,9 +108,18 @@ namespace Project1.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Resources\happycloud.png.
         /// </summary>
-        internal static string HappyCloudFileName {
+        internal static string HappyCloudFileName1 {
             get {
-                return ResourceManager.GetString("HappyCloudFileName", resourceCulture);
+                return ResourceManager.GetString("HappyCloudFileName1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources\happycloud_2.png.
+        /// </summary>
+        internal static string HappyCloudFileName2 {
+            get {
+                return ResourceManager.GetString("HappyCloudFileName2", resourceCulture);
             }
         }
         

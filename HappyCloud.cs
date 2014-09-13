@@ -7,12 +7,13 @@ namespace Project1
     {
         public const int ScoreAward = 4;
         public const int EngeryAward = 32;
-        public static readonly Sprite HappyCloudSprite = new Sprite(Properties.Resources.HappyCloudFileName, origin: IntVector.Zero);
+        public static readonly Sprite HappyCloudSprite1 = new Sprite(Properties.Resources.HappyCloudFileName1, origin: IntVector.Zero);
+        public static readonly Sprite HappyCloudSprite2 = new Sprite(Properties.Resources.HappyCloudFileName2, origin: IntVector.Zero);
 
         public HappyCloud()
             : base(Room.Width + 50, GRandom.Int(100, 300))
         {
-            this.Sprite = HappyCloudSprite;
+            this.Sprite = HappyCloudSprite1;
             this.Transform.Scale *= .2;
             this.Mask.Rectangle(126, 283, 528 - 126, this.Sprite.Height - 283);
         }
@@ -23,6 +24,7 @@ namespace Project1
 			{
 				Statistics.Score += HappyCloud.ScoreAward;
 				Statistics.Energy += HappyCloud.EngeryAward;
+                this.Sprite = HappyCloudSprite2;
 			}
 			this.HasCollided = true;
 		}
