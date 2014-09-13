@@ -8,7 +8,7 @@ namespace Project1
 		private const int FlappingCost = 2;
 		private const int StepScore = 1;
 		private static readonly Vector GravitySpeed = new Vector(0, 0.25);
-		private static readonly Vector InitialFlappingSpeed = new Vector(0, -6);
+		private static readonly Vector InitialFlappingSpeed = new Vector(0, -9);
 		private static readonly Vector FlappingSpeed = new Vector(0, -4);
 
 		public Player(Point location)
@@ -45,7 +45,7 @@ namespace Project1
 
 		public override void OnEndStep()
 		{
-			if ((this.Y + this.Image.Height) >= Window.Height)
+			if (BoundingBox.Bottom >= Window.Height - 60)
 			{
 				this.Destroy();
 			}
