@@ -23,5 +23,14 @@ namespace Project1
             set { this.collision = value; }
         }
 
+		public override void OnCollision(Player player)
+		{
+			if (!(this.HasCollided))
+			{
+				Statistics.Score += HappyCloud.ScoreAward;
+				Statistics.Energy += HappyCloud.EngeryAward;
+			}
+			this.HasCollided = true;
+		}
     }
 }

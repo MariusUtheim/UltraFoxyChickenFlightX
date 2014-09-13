@@ -3,7 +3,7 @@ using System;
 
 namespace Project1
 {
-    public abstract class SceneryObject : MovingObject
+    public abstract class SceneryObject : MovingObject, ICollisionListener<Player>
     {
         public static readonly Vector MovementSpeed = new Vector(-5, 0);
 
@@ -19,5 +19,7 @@ namespace Project1
                 this.Destroy();
             }
         }
+
+		public abstract void OnCollision(Player player);
     }
 }

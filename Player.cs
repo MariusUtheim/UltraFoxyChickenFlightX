@@ -3,7 +3,7 @@ using System;
 
 namespace Project1
 {
-    public class Player : MovingObject, IGlobalMousePressListener, ICollisionListener<BadTree>, ICollisionListener<AngryCloud>, ICollisionListener<HappyCloud>, ICollisionListener<GoodTree>
+    public class Player : MovingObject, IGlobalMousePressListener
     {
         public const int Radius = 15;
         private const int FlappingCost = 2;
@@ -77,6 +77,10 @@ namespace Project1
         {
             Fill.Circle(Color.Red, this.Location, Radius);
 
+			Rectangle fullHealthRegion = new Rectangle(20, 20, 128, 20);
+			Rectangle currentHealthRegion = new Rectangle(20, 20, Statistics.Energy, 20);
+			Fill.Rectangle(Color.Red, Color.LightCoral, Color.LightBlue, Color.DarkRed, currentHealthRegion);
+			Draw.Rectangle(Color.Black, fullHealthRegion);
         }
 
         public override void OnDestroy()
@@ -84,34 +88,5 @@ namespace Project1
             Game.Sleep(1200);
             Game.Quit();
         }
-
-        public void OnCollision(BadTree badTree)
-        {
-            this.Destroy();
-        }
-
-        public void OnCollision(AngryCloud angryCloud)
-        {
-            if (!(angryCloud.HasCollided))
-            {
-                Statistics.Score -= AngryCloud.ScorePenalty;
-                Statistics.Energy -= AngryCloud.EngeryPenalty; 
-            }
-            angryCloud.HasCollided = true;
-        }
-
-        public void OnCollision(HappyCloud happyCloud)
-        {
-            if (!(happyCloud.HasCollided))
-            {
-                Statistics.Score += HappyCloud.ScoreAward;
-                Statistics.Energy += HappyCloud.EngeryAward; 
-            }
-            happyCloud.HasCollided = true;
-        }
-
-        public void OnCollision(GoodTree other)
-        {
-        }
-    }
+	}
 }

@@ -21,5 +21,16 @@ namespace Project1
             get { return this.collision; }
             set { this.collision = value; }
         }
+
+	
+        public override void OnCollision(Player other)
+        {
+            if (!(this.HasCollided))
+            {
+                Statistics.Score -= AngryCloud.ScorePenalty;
+                Statistics.Energy -= AngryCloud.EngeryPenalty; 
+            }
+            this.HasCollided = true;
+		}
     }
 }
