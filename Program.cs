@@ -29,6 +29,7 @@ namespace Project1
 
             var p = new Player(250, 400);
 			Spawner.Activate();
+			GUI.Init();
         }
     }
 }

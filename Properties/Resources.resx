@@ -132,4 +132,7 @@
   <data name="HenhouseFileName" xml:space="preserve">
     <value>Resources\henhouse.png</value>
   </data>
+  <data name="NumbersSpriteFileName" xml:space="preserve">
+    <value>Resources\0 to 9.png</value>
+  </data>
 </root>
