@@ -174,4 +174,7 @@
   <data name="MenuQuitFileName" xml:space="preserve">
     <value>Resources\quit.png</value>
   </data>
+  <data name="FoxyStandingFileName" xml:space="preserve">
+    <value>Resources\foxystanding.png</value>
+  </data>
 </root>

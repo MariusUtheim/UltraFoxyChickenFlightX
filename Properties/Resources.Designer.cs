@@ -133,6 +133,15 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\foxystanding.png.
+        /// </summary>
+        internal static string FoxyStandingFileName {
+            get {
+                return ResourceManager.GetString("FoxyStandingFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\bush.ogg.
         /// </summary>
         internal static string GoodTreeSoundName {
