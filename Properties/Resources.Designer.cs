@@ -187,6 +187,42 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resouces\continue.png.
+        /// </summary>
+        internal static string MenuContinueFileName {
+            get {
+                return ResourceManager.GetString("MenuContinueFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources\UltraFOxyChickenFlightX.png.
+        /// </summary>
+        internal static string MenuGameTitleFileName {
+            get {
+                return ResourceManager.GetString("MenuGameTitleFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources\new_game.png.
+        /// </summary>
+        internal static string MenuNewGameFileName {
+            get {
+                return ResourceManager.GetString("MenuNewGameFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources\quit.png.
+        /// </summary>
+        internal static string MenuQuitFileName {
+            get {
+                return ResourceManager.GetString("MenuQuitFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\0_9.png.
         /// </summary>
         internal static string NumbersSpriteFileName {
