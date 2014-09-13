@@ -117,8 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AngryCloudFileName" xml:space="preserve">
+  <data name="AngryCloudFileName1" xml:space="preserve">
     <value>Resources\angry cloud1.png</value>
+  </data>
+  <data name="AngryCloudFileName2" xml:space="preserve">
+    <value>Resources\angry cloud2.png</value>
   </data>
   <data name="BadTreeSpriteFileName" xml:space="preserve">
     <value>Resources\furutre.png</value>
