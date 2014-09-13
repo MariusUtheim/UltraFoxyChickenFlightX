@@ -151,7 +151,7 @@
     <value>Resources\happycloud_2.png</value>
   </data>
   <data name="HappyCloudSoundName" xml:space="preserve">
-    <value>Resources\englesky shorter.ogg</value>
+    <value>Resources\englesky.ogg</value>
   </data>
   <data name="HenhouseFileName" xml:space="preserve">
     <value>Resources\henhouse.png</value>

@@ -166,7 +166,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\englesky shorter.ogg">
+    <None Include="Resources\englesky.ogg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Resources\treffer grantre.ogg">
