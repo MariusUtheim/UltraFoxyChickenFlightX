@@ -17,12 +17,7 @@ namespace Project1
         {
 			GlobalEvent.ExitOnEscape = true;
 
-            var henhouse = new Henhouse(5, Window.Height);
-            henhouse.Y -= henhouse.Image.Height;
             var p = new Player(250, 400);
-            var bt = new BadTree(henhouse.Image.Width + 150, Window.Height);
-			bt.Y = Window.Height - bt.Image.Height;
-
 			Spawner.Activate();
         }
     }
