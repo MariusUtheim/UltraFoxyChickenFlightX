@@ -128,6 +128,7 @@
     <Content Include="Resources\bg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\continue.png" />
     <Content Include="Resources\epletre.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -146,6 +147,9 @@
     <Content Include="Resources\henhouse.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\new game.png" />
+    <Content Include="Resources\quit.png" />
+    <Content Include="Resources\UltraFOxyChickenFlightX.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
