@@ -16,9 +16,10 @@ namespace Project1
         {
 			this.Velocity = InitialFlappingSpeed;
 			Sprite = Sprites.FoxyHappy;
-			Transform.Scale *= 0.1;
+			Transform.Scale *= 0.20;
 			Image.Speed = 0;
-            this.Mask.Rectangle(597, 681, 729 - 597, 1293 - 681);
+            this.Mask.Rectangle(new IntRectangle(597, 681, 729 - 597, 1293 - 681) - Sprite.Origin.GetValueOrDefault());
+
 		}
 
         public void OnGlobalMousePress(MouseButton button)
@@ -55,6 +56,8 @@ namespace Project1
             this.Velocity += GravitySpeed;
 
             Statistics.Score += StepScore;
+
+			Transform.Rotation = Angle.Deg(15 + 4 * GMath.Sin(Time.LoopCount * 0.1));
 
             base.OnStep();
         }
