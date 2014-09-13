@@ -44,7 +44,7 @@ namespace Project1
                     this.IsStarted = true;
                     Statistics.Energy -= FlappingCost;
                 }
-                else if (Statistics.Energy > FlappingCost)
+                else if (Statistics.Energy > 0)
                 {
                     this.Velocity += FlappingSpeed;
                     Statistics.Energy -= FlappingCost;
@@ -79,7 +79,7 @@ namespace Project1
 
 			Rectangle fullHealthRegion = new Rectangle(20, 20, 128, 20);
 			Rectangle currentHealthRegion = new Rectangle(20, 20, Statistics.Energy, 20);
-			Fill.Rectangle(Color.Red, Color.LightCoral, Color.LightBlue, Color.DarkRed, currentHealthRegion);
+			Fill.Rectangle(Color.Red, Color.White, Color.LightBlue, Color.DarkRed, currentHealthRegion);
 			Draw.Rectangle(Color.Black, fullHealthRegion);
         }
 
