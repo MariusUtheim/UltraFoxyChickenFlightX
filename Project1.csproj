@@ -146,10 +146,10 @@
     <Content Include="Resources\furutre.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\happycloud.png">
+    <Content Include="Resources\happycloud1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\happycloud_2.png">
+    <Content Include="Resources\happycloud2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\henhouse.png">

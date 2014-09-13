@@ -151,7 +151,7 @@ namespace Project1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resources\happycloud.png.
+        ///   Looks up a localized string similar to Resources\happycloud1.png.
         /// </summary>
         internal static string HappyCloudFileName1 {
             get {
@@ -160,7 +160,7 @@ namespace Project1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resources\happycloud_2.png.
+        ///   Looks up a localized string similar to Resources\happycloud2.png.
         /// </summary>
         internal static string HappyCloudFileName2 {
             get {
