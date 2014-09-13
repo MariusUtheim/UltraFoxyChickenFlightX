@@ -24,11 +24,5 @@ namespace Project1
             this.Transform.YScale = .2;
             this.Mask.Rectangle(350, 333, 485 - 350, this.Sprite.Height - 333);
         }
-
-		public override void OnDraw()
-		{
-			base.OnDraw();
-			Mask.DrawOutline();
-		}
     }
 }

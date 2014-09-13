@@ -59,7 +59,6 @@ namespace Project1
         public override void OnDraw()
         {
             Fill.Circle(Color.Red, this.Location, Radius);
-			Mask.DrawOutline(Color.Black);
         }
 
         public override void OnDestroy()
