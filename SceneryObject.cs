@@ -6,6 +6,13 @@ namespace Project1
     public abstract class SceneryObject : MovingObject, ICollisionListener<Player>
     {
         public static readonly Vector MovementSpeed = new Vector(-5, 0);
+        private bool collision = false;
+
+        public bool HasCollided
+        {
+            get { return this.collision; }
+            set { this.collision = value; }
+        }
 
         public SceneryObject(double x, double y) : base(x, y) 
         {

@@ -32,7 +32,7 @@ namespace Project1
 
 		static void spawnObject(Alarm alarm)
 		{
-			Activator.CreateInstance(GRandom.Choose(typeof(BadTree), typeof(GoodTree), typeof(AngryCloud)));
+			Activator.CreateInstance(GRandom.Choose(typeof(BadTree), typeof(GoodTree), typeof(AngryCloud), typeof(HappyCloud)));
 		}
 	}
 }
