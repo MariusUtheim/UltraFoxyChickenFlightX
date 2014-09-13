@@ -186,4 +186,7 @@
   <data name="MainMenuSoundName" xml:space="preserve">
     <value>Resources\MainMenuSoundtrack.ogg</value>
   </data>
+  <data name="BackgroundMusicFileName" xml:space="preserve">
+    <value>Resources\backgroundmusic.ogg</value>
+  </data>
 </root>

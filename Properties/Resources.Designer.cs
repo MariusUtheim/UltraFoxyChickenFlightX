@@ -97,6 +97,15 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\backgroundmusic.ogg.
+        /// </summary>
+        internal static string BackgroundMusicFileName {
+            get {
+                return ResourceManager.GetString("BackgroundMusicFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\treffer grantre.ogg.
         /// </summary>
         internal static string BadTreeSoundName {
