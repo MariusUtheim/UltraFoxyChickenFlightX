@@ -159,6 +159,9 @@
   <data name="NumbersSpriteFileName" xml:space="preserve">
     <value>Resources\0_9.png</value>
   </data>
+  <data name="AngryCloudSoundName" xml:space="preserve">
+    <value>Resources\thunder.ogg</value>
+  </data>
   <data name="MenuContinueFileName" xml:space="preserve">
     <value>Resouces\continue.png</value>
   </data>

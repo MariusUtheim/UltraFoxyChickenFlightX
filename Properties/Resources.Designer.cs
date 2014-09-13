@@ -79,6 +79,15 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\thunder.ogg.
+        /// </summary>
+        internal static string AngryCloudSoundName {
+            get {
+                return ResourceManager.GetString("AngryCloudSoundName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\bg.png.
         /// </summary>
         internal static string BackgroundFileName {
