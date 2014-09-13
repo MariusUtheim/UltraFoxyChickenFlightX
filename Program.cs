@@ -28,23 +28,13 @@ namespace Project1
 			GlobalEvent.ExitOnEscape = true;
 			Sprites.LoadAll();
 			Sounds.LoadAll();
-
-			Spawner.Activate();
-
             Background.Sprite = new Sprite(Properties.Resources.BackgroundFileName);
             Background.IsTiled = true;
-
-            GlobalEvent.Step += MoveBackground;
 
             var henhs = new Henhouse(5, 0);
             henhs.Y = Window.Height - henhs.Image.Height;
             var p = new PreGamePlayer(henhs);			
 			GUI.Init();
-        }
-
-        private static void MoveBackground()
-        {
-            Background.Offset += SceneryObject.MovementSpeed / 4;
         }
     }
 }
