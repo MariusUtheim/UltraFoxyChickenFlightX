@@ -177,7 +177,7 @@
     <None Include="Resources\thunder.ogg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\85581__jankoehl__hit-bush01.ogg">
+    <None Include="Resources\bush.ogg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

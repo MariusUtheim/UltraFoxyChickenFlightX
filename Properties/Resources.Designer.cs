@@ -133,7 +133,7 @@ namespace Project1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resources\85581__jankoehl__hit-bush01.ogg.
+        ///   Looks up a localized string similar to Resources\bush.ogg.
         /// </summary>
         internal static string GoodTreeSoundName {
             get {
