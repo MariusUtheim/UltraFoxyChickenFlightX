@@ -20,7 +20,7 @@ namespace Project1
 		{
 			if (!(this.HasCollided))
             {
-                player.Velocity += BoostAward;
+                player.Velocity = BoostAward;
             }
             this.HasCollided = true;
 		}
