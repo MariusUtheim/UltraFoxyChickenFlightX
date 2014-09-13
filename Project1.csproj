@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="AngryCloud.cs" />
     <Compile Include="BadTree.cs" />
+    <Compile Include="Farmer.cs" />
     <Compile Include="GoodTree.cs" />
     <Compile Include="GUI.cs" />
     <Compile Include="HappyCloud.cs" />
@@ -156,6 +157,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\epletre.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\farmer.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\furutre.png">

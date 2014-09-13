@@ -129,6 +129,9 @@
   <data name="BadTreeSpriteFileName" xml:space="preserve">
     <value>Resources\furutre.png</value>
   </data>
+  <data name="FarmerFileName" xml:space="preserve">
+    <value>Resources\farmer.png</value>
+  </data>
   <data name="GoodTreeSpriteFileName" xml:space="preserve">
     <value>Resources\epletre.png</value>
   </data>

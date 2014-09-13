@@ -26,6 +26,7 @@ namespace Project1
         public override void OnDestroy()
         {
             new Player(this.Location);
+            new Farmer();
         }
     }
 }
