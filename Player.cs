@@ -37,7 +37,6 @@ namespace Project1
         {
             if (button == MouseButton.Left)
             {
-                // TODO: Implememt "flaksing" when left mouse button is hit
                 if (!(this.IsStarted))
                 {
                     this.Velocity += InitialFlappingSpeed;
