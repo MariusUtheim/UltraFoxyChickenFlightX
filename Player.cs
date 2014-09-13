@@ -5,9 +5,6 @@ namespace Project1
 {
     public class Player : MovingObject, IGlobalMousePressListener, IKeyPressListener
     {
-        public static readonly Sprite FoxyHappySprite = new Sprite(Properties.Resources.FoxyHappyFileName, origin: IntVector.Zero);
-        public static readonly Sprite FoxyScaredSprite = new Sprite(Properties.Resources.FoxyScaredFileName, origin: IntVector.Zero);
-        
         private const int FlappingCost = 2;
         private const int StepScore = 1;
         private static readonly Vector GravitySpeed = new Vector(0, 0.25);
@@ -55,9 +52,9 @@ namespace Project1
 
         public override void OnStep()
         {
-                this.Velocity += GravitySpeed;
+            this.Velocity += GravitySpeed;
 
-                Statistics.Score += StepScore;
+            Statistics.Score += StepScore;
 
             base.OnStep();
         }

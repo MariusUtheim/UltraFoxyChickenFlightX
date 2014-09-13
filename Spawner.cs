@@ -18,6 +18,7 @@ namespace Project1
 				return;
 
 			isActive = true;
+
 			spawnAlarm = Alarm.Start(60, spawnObject);
 			spawnAlarm.IsLooping = true;
 		}

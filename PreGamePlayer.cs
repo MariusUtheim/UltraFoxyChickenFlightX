@@ -3,30 +3,46 @@ using System;
 
 namespace Project1
 {
-    public class PreGamePlayer : GameObject
+    public class PreGamePlayer : GameObject, IKeyPressListener, IGlobalMousePressListener
     {
-        public Henhouse Henhouse { get; set; }
 
         public PreGamePlayer(Henhouse henhouse)
-            : base(200, 250)
+            : base(350, 250)
         {
-            this.Henhouse = henhouse;
+			Image.Blend = Color.Red;
+			Image.Alpha = 0;
         }
 
         public override void OnStep()
         {
-            if ((this.Henhouse.X + this.Henhouse.Image.Width) < this.X)
-            {
-                this.Destroy();
-            }
-
-            base.OnStep();
+			if (Image.Alpha < 1.0)
+				Image.Alpha += 0.01;
         }
 
-        public override void OnDestroy()
-        {
-            new Player(this.Location);
-            new Farmer();
-        }
-    }
+		public void OnKeyPress(Key key)
+		{
+			if (key == Key.Space) 
+				StartGame();
+		}
+
+		public void OnGlobalMousePress(MouseButton button)
+		{
+			if (button == MouseButton.Left)
+				StartGame();
+		}
+
+		public void StartGame()
+		{
+			this.Destroy();
+			new Player(this.Location);
+			new Farmer();
+			Spawner.Activate();
+			GlobalEvent.Step += () => { Background.Offset += SceneryObject.MovementSpeed / 4; };
+		}
+
+		public override void OnDraw()
+		{
+			Fill.Circle(Image.Blend, Location, 30);
+		}
+	}
 }
