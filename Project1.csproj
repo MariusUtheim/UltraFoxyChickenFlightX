@@ -68,6 +68,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AngryCloud.cs" />
     <Compile Include="BadTree.cs" />
     <Compile Include="GoodTree.cs" />
     <Compile Include="Henhouse.cs" />
@@ -79,6 +80,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SceneryObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="GameMaker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

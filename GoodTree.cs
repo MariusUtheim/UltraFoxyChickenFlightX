@@ -3,21 +3,15 @@ using System;
 
 namespace Project1
 {
-    public class GoodTree : GameObject
+    public class GoodTree : SceneryObject
     {
         public static readonly Sprite GoodTreeSprite = new Sprite(Properties.Resources.GoodTreeSpriteFileName, origin: IntVector.Zero);
 
-        public GoodTree(double x, double y) : base(x, y)
-        {
-            this.Init();
-        }
+        public GoodTree(double x, double y) : base(x, y) { }
 
-        public GoodTree(Point location) : base(location)
-        {
-            this.Init();
-        }
+        public GoodTree(Point location) : base(location) { }
 
-        private void Init()
+        protected override void Init()
         {
             this.Sprite = GoodTreeSprite;
             this.Transform.XScale = .2;
