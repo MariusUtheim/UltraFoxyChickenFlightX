@@ -81,7 +81,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="GameMaker">
+    <Reference Include="GameMaker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>.\GameMaker.dll</HintPath>
     </Reference>
     <Reference Include="OggVorbisDecoder">
