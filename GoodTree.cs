@@ -14,9 +14,10 @@ namespace Project1
         protected override void Init()
         {
             this.Sprite = GoodTreeSprite;
-            this.Transform.XScale = .2;
-            this.Transform.YScale = .2;
+            this.Transform.Scale *= .2;
             this.Mask.Rectangle(320, 260, 450 - 320, this.BoundingBox.Height - 260);
+
+            base.Init();
         }
     }
 }
