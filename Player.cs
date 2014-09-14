@@ -7,11 +7,14 @@ namespace UltraFoxyChickenFlightX
 	{
 		private const int FlappingCost = 2;
 		private const int StepScore = 1;
+
+        private const double TargetBackgroundVolume = .7;
+
 		private static readonly Vector GravitySpeed = new Vector(0, 0.25);
 		private static readonly Vector InitialFlappingSpeed = new Vector(0, -9);
 		private static readonly Vector FlappingSpeed = new Vector(0, -4);
 
-        private SoundInstance backgroundMusicInstance = Sounds.Background.Play(true, .5);
+        private SoundInstance backgroundMusicInstance = Sounds.Background.Play(true, TargetBackgroundVolume);
 
 		int imageIndex = 0;
 		int x0 = 350;
@@ -68,6 +71,7 @@ namespace UltraFoxyChickenFlightX
 			{
 				this.Velocity += FlappingSpeed;
 				Statistics.Energy -= FlappingCost;
+                Sounds.BirdFlap.Play(volume: 5);
 			}
 		}
 
@@ -94,14 +98,14 @@ namespace UltraFoxyChickenFlightX
                 this.Velocity = new Vector(this.Velocity.X, 0);
             }
 
-            if (this.backgroundMusicInstance.Volume < 1)
-            {
-                this.backgroundMusicInstance.Volume += .1;
-            }
-            else if (this.backgroundMusicInstance.Volume > 1)
-            {
-                this.backgroundMusicInstance.Volume = 1;
-            }
+            //if (this.backgroundMusicInstance.Volume < TargetBackgroundVolume)
+            //{
+            //    this.backgroundMusicInstance.Volume += .05;
+            //}
+            //else if (this.backgroundMusicInstance.Volume > TargetBackgroundVolume)
+            //{
+            //    this.backgroundMusicInstance.Volume = TargetBackgroundVolume;
+            //}
 
 			base.OnStep();
 		}

@@ -180,8 +180,8 @@
   <data name="FoxyStandingFileName" xml:space="preserve">
     <value>Resources\foxystanding.png</value>
   </data>
-  <data name="WindFileName" xml:space="preserve">
-    <value>Resources\wind.ogg</value>
+  <data name="BirdFlapFileName" xml:space="preserve">
+    <value>Resources\birdflap1.ogg</value>
   </data>
   <data name="MainMenuSoundName" xml:space="preserve">
     <value>Resources\MenuSoundtrack.ogg</value>
