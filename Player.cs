@@ -79,6 +79,8 @@ namespace UltraFoxyChickenFlightX
 		{
 			if (BoundingBox.Bottom >= Window.Height - 60)
 			{
+                Sounds.Groundfall.Play();
+
 				this.Destroy();
 			}
 		}
