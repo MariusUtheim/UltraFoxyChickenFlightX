@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GameMaker;
 
-namespace Project1
+namespace UltraFoxyChickenFlightX
 {
 	public static class Sprites
 	{

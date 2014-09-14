@@ -1,7 +1,7 @@
 ﻿using GameMaker;
 using System;
 
-namespace Project1
+namespace UltraFoxyChickenFlightX
 {
 	public class Player : MovingObject, IGlobalMousePressListener, IKeyPressListener
 	{
@@ -60,7 +60,7 @@ namespace Project1
 
 			Transform.Rotation = Angle.Deg(15 + 4 * GMath.Sin(Time.LoopCount * 0.1));
 
-            if (this.Y < 0 && this.Velocity.Y < 0)
+            if (this.Y < -20 && this.Velocity.Y < 0)
             {
                 this.Velocity = new Vector(this.Velocity.X, 0);
             }

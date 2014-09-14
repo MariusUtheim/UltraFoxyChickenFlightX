@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace Project1
+namespace UltraFoxyChickenFlightX
 {
 	static class Spawner
 	{

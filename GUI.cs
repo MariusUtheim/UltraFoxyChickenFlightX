@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using GameMaker;
 using OpenTK.Graphics.OpenGL;
 
-namespace Project1
+namespace UltraFoxyChickenFlightX
 {
 	public static class GUI
 	{

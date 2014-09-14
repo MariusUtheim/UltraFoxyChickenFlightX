@@ -1,7 +1,7 @@
 ﻿using GameMaker;
 using System;
 
-namespace Project1
+namespace UltraFoxyChickenFlightX
 {
     public class Henhouse : MovingObject
     {

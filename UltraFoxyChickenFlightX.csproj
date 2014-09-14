@@ -7,8 +7,8 @@
     <ProjectGuid>{EF589B94-E2D8-4A5A-864C-D0E6504BDD64}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Project1</RootNamespace>
-    <AssemblyName>Project1</AssemblyName>
+    <RootNamespace>UltraFoxyChickenFlightX</RootNamespace>
+    <AssemblyName>UltraFoxyChickenFlightX</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
