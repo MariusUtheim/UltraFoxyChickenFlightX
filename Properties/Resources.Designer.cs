@@ -133,15 +133,6 @@ namespace UltraFoxyChickenFlightX.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resources\chicken house rustle.ogg.
-        /// </summary>
-        internal static string ChickenRustleMusicFIleName {
-            get {
-                return ResourceManager.GetString("ChickenRustleMusicFIleName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Resources\farmer.png.
         /// </summary>
         internal static string FarmerFileName {
@@ -264,6 +255,15 @@ namespace UltraFoxyChickenFlightX.Properties {
         internal static string HenhouseFileName {
             get {
                 return ResourceManager.GetString("HenhouseFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources\henhouse.ogg.
+        /// </summary>
+        internal static string HenhouseSoundFileName {
+            get {
+                return ResourceManager.GetString("HenhouseSoundFileName", resourceCulture);
             }
         }
         

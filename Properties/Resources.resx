@@ -189,8 +189,8 @@
   <data name="BackgroundMusicFileName" xml:space="preserve">
     <value>Resources\backgroundmusic.ogg</value>
   </data>
-  <data name="ChickenRustleMusicFIleName" xml:space="preserve">
-    <value>Resources\chicken house rustle.ogg</value>
+  <data name="HenhouseSoundFileName" xml:space="preserve">
+    <value>Resources\henhouse.ogg</value>
   </data>
   <data name="FoxyHappy2FileName" xml:space="preserve">
     <value>Resources\foxyhappy2.png</value>

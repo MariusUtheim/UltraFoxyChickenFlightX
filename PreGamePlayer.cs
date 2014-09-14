@@ -5,7 +5,7 @@ namespace UltraFoxyChickenFlightX
 {
     public class PreGamePlayer : GameObject, IKeyPressListener, IGlobalMousePressListener
     {
-        SoundInstance chickenRustle = Sounds.ChickenRustle.Play(true, pitch: 2.2);
+        SoundInstance pregameSound = Sounds.Henhouse.Play(true, pitch: 2.2);
 
         public PreGamePlayer()
             : base(250, 300)
@@ -36,7 +36,7 @@ namespace UltraFoxyChickenFlightX
 
         public override void OnDestroy()
         {
-            chickenRustle.Stop();
+            pregameSound.Stop();
             
             base.OnDestroy();
         }

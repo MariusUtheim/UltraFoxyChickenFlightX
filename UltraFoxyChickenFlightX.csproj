@@ -136,7 +136,7 @@
     <Content Include="Resources\birdflap1.ogg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\chicken house rustle.ogg">
+    <Content Include="Resources\henhouse.ogg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\continue.png">
