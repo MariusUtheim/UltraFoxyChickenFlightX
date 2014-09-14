@@ -38,7 +38,7 @@ namespace UltraFoxyChickenFlightX
 
         public void OnCollision(Player player)
         {
-            if (farmerJoeSound != null && farmerJoeSound.State == SoundState.Stopped)
+            if (farmerJoeSound != null && farmerJoeSound.Sound != null && farmerJoeSound.State == SoundState.Stopped)
                 farmerJoeSound = Sounds.FarmerJoe.Play();
 
             player.Scare();
