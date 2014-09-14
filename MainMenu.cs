@@ -42,7 +42,6 @@ namespace UltraFoxyChickenFlightX
 				Instance<SceneryObject>.Do(inst => inst.Image.Alpha = this.Image.Alpha);
 				if (Image.Alpha <= 0)
 				{
-                    Instance<Farmer>.Do(joe => joe.Destroy()); // Fix to remove Joe, if he has spawned earlier
 					Instance<MenuButton>.Do(inst => inst.Destroy());
 					Instance<SceneryObject>.Do(inst => inst.Destroy());
 					new PreGamePlayer();

@@ -9,6 +9,8 @@ namespace UltraFoxyChickenFlightX
         double x0;
         private SoundInstance farmerJoeSound;
 
+        public bool IsMoveOut { get; set; }
+
         public Farmer()
             : base(Instance<Player>.First().Location.X - 160, 0)
         {
@@ -24,6 +26,7 @@ namespace UltraFoxyChickenFlightX
         public override void OnStep()
         {
             base.OnStep();
+
             if (x0 < 220)
                 x0 += (220 - x0) / 44;
             X = x0 + 50 * GMath.Sin(Time.LoopCount / 180.0 * GMath.Tau);
@@ -38,7 +41,7 @@ namespace UltraFoxyChickenFlightX
 
         public void OnCollision(Player player)
         {
-            if (farmerJoeSound != null && farmerJoeSound.State == SoundState.Stopped)
+            if (farmerJoeSound != null && farmerJoeSound.Sound != null && farmerJoeSound.State == SoundState.Stopped)
                 farmerJoeSound = Sounds.FarmerJoe.Play();
 
             player.Scare();

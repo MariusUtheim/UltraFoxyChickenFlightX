@@ -213,4 +213,7 @@
   <data name="GroundfallFileName" xml:space="preserve">
     <value>Resources\groundfall.ogg</value>
   </data>
+  <data name="ParticleSpriteFileName" xml:space="preserve">
+    <value>Resources\particle.png</value>
+  </data>
 </root>

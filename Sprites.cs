@@ -28,5 +28,6 @@ namespace UltraFoxyChickenFlightX
 		public static readonly Sprite Quit = new Sprite(Properties.Resources.MenuQuitFileName, 1, null, true);
 		public static readonly Sprite QuitHover = new Sprite(Properties.Resources.MainMenuQuitHoverFileName, 1, null, true);
 		public static readonly Sprite Logo = new Sprite(Properties.Resources.LogoFileName);
+        public static readonly Sprite Particle = new Sprite(Properties.Resources.ParticleSpriteFileName, preload: true);
 	}
 }
