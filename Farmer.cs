@@ -32,7 +32,7 @@ namespace UltraFoxyChickenFlightX
 
         public void OnCollision(Player player)
         {
-            return;
+            player.Scare();
         }
     }
 }
