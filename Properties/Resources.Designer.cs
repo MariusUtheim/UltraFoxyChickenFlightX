@@ -347,5 +347,14 @@ namespace UltraFoxyChickenFlightX.Properties {
                 return ResourceManager.GetString("NumbersSpriteFileName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources\particle.png.
+        /// </summary>
+        internal static string ParticleSpriteFileName {
+            get {
+                return ResourceManager.GetString("ParticleSpriteFileName", resourceCulture);
+            }
+        }
     }
 }
