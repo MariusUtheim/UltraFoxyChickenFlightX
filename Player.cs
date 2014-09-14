@@ -12,7 +12,9 @@ namespace Project1
 		private static readonly Vector FlappingSpeed = new Vector(0, -4);
 
 		private SoundInstance backgroundMusicInstance = Sounds.Background.Play(true, .5);
+
 		int imageIndex = 0;
+		int x0 = 350;
 		Sprite[] currentSprite;
 
 		public Player(Point location)
@@ -75,6 +77,8 @@ namespace Project1
 			Statistics.Score += StepScore;
 
 			Transform.Rotation = Angle.Deg(15 + 4 * GMath.Sin(Time.LoopCount * 0.1));
+
+			X += (x0 - X) / 50.0;
 
 			if (this.Y < 0 && this.Velocity.Y < 0)
 			{

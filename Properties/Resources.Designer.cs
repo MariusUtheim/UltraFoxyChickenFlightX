@@ -241,6 +241,15 @@ namespace Project1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\UltraFoxyChickenFlightX.png.
+        /// </summary>
+        internal static string LogoFileName {
+            get {
+                return ResourceManager.GetString("LogoFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\new_game_hover.png.
         /// </summary>
         internal static string MainMenuNewGameHoverFileName {

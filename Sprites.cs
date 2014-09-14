@@ -27,6 +27,6 @@ namespace Project1
 		public static readonly Sprite NewGameHover = new Sprite(Properties.Resources.MainMenuNewGameHoverFileName, 1, null, true);
 		public static readonly Sprite Quit = new Sprite(Properties.Resources.MenuQuitFileName, 1, null, true);
 		public static readonly Sprite QuitHover = new Sprite(Properties.Resources.MainMenuQuitHoverFileName, 1, null, true);
-
+		public static readonly Sprite Logo = new Sprite(Properties.Resources.LogoFileName);
 	}
 }

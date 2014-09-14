@@ -204,4 +204,7 @@
   <data name="MainMenuQuitHoverFileName" xml:space="preserve">
     <value>Resources\quit_hover.png</value>
   </data>
+  <data name="LogoFileName" xml:space="preserve">
+    <value>Resources\UltraFoxyChickenFlightX.png</value>
+  </data>
 </root>
