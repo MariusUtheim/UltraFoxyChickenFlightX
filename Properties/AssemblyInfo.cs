@@ -31,9 +31,9 @@ using System.Runtime.InteropServices;
 #endif // !DEBUG
 #endregion
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Written by ***, 2014")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyProduct("UltraFoxyChickenFlightX")]
+[assembly: AssemblyCopyright("***, 2014")]
+[assembly: AssemblyTrademark("Artic Game Jam 2014")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -53,5 +53,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("0.4.51.*")]
-[assembly: AssemblyFileVersion("0.4.51")]
+[assembly: AssemblyVersion("1.4.51.*")]
+[assembly: AssemblyFileVersion("1.4.51")]
