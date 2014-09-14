@@ -151,6 +151,15 @@ namespace UltraFoxyChickenFlightX.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\farmer_joe.ogg.
+        /// </summary>
+        internal static string FarmerJoeSoundFileName {
+            get {
+                return ResourceManager.GetString("FarmerJoeSoundFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\foxyhappy1.png.
         /// </summary>
         internal static string FoxyHappy1FileName {

@@ -23,5 +23,6 @@ namespace UltraFoxyChickenFlightX
         public static Sound ChickenRustle = new Sound(Properties.Resources.ChickenRustleMusicFIleName, true);
         public static Sound BirdFlap = new Sound(Properties.Resources.BirdFlapFileName, true);
         public static Sound Groundfall = new Sound(Properties.Resources.GroundfallFileName, true);
+        public static Sound FarmerJoe = new Sound(Properties.Resources.FarmerJoeSoundFileName, true);
 	}
 }
