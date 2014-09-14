@@ -5,8 +5,11 @@ namespace UltraFoxyChickenFlightX
 {
     public static class Statistics
     {
-        private static int score = 0;
-        private static int energy = 128;
+        public const int StartEnergy = 128;
+        public const int StartingScore = 0;
+
+        private static int score = StartingScore;
+        private static int energy = StartEnergy;
 
         public static int Score
         {

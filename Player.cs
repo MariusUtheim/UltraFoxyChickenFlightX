@@ -108,8 +108,8 @@ namespace UltraFoxyChickenFlightX
 
 		public override void OnDestroy()
 		{
-			Game.Sleep(1200);
-			Game.Quit();
+            backgroundMusicInstance.Stop();
+            new MainMenu();
 		}
 	}
 }
