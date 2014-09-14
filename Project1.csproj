@@ -76,6 +76,7 @@
     <Compile Include="HappyCloud.cs" />
     <Compile Include="Henhouse.cs" />
     <Compile Include="MainMenu.cs" />
+    <Compile Include="MenuButton.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PreGamePlayer.cs" />
     <Compile Include="Program.cs" />
@@ -144,10 +145,16 @@
     <Content Include="Resources\farmer.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\foxyhappy.png">
+    <Content Include="Resources\foxyhappy1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\foxyscared.png">
+    <Content Include="Resources\foxyhappy2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\foxyscared1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\foxyscared2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\foxystanding.png">
@@ -165,10 +172,16 @@
     <Content Include="Resources\henhouse.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\new game.png">
+    <Content Include="Resources\new_game.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\new_game_hover.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\quit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\quit_hover.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\UltraFOxyChickenFlightX.png">
