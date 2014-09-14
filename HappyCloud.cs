@@ -10,7 +10,7 @@ namespace UltraFoxyChickenFlightX
 		private double wobbleAmount = 0;
 
         public HappyCloud()
-            : base(Room.Width + 50, GRandom.Int(100, 300))
+            : base(Room.Width + 150, GRandom.Int(100, 300))
         {
             this.Sprite = Sprites.HappyCloud;
             this.Transform.Scale *= .2;

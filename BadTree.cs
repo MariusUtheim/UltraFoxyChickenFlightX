@@ -6,7 +6,7 @@ namespace UltraFoxyChickenFlightX
     public class BadTree : SceneryObject
     {
 
-		public BadTree() : base(Room.Width + 50, Room.Height - 80)
+		public BadTree() : base(Room.Width + 150, Room.Height - 80)
 		{
             this.Sprite = Sprites.BadTree;
             this.Transform.Scale *= .325;

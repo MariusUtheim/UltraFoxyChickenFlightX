@@ -10,7 +10,7 @@ namespace UltraFoxyChickenFlightX
 		private double wobbleAmount = 0;
 
 		public GoodTree() 
-			: base(Room.Width + 50, Room.Height - 80)
+			: base(Room.Width + 150, Room.Height - 80)
 		{
 			this.Sprite = Sprites.GoodTree;
 			this.Transform.Scale *= 0.35;

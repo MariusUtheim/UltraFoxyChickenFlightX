@@ -9,7 +9,7 @@ namespace UltraFoxyChickenFlightX
         public const int EngeryPenalty = 32;
 
 
-		public AngryCloud() : base(Room.Width + 50, GRandom.Int(100, 300))
+		public AngryCloud() : base(Room.Width + 150, GRandom.Int(100, 300))
 		{
 			Sprite = Sprites.AngryCloud;
 			Transform.Scale *= 0.2;
