@@ -5,7 +5,7 @@ namespace Project1
 {
     public class PreGamePlayer : GameObject, IKeyPressListener, IGlobalMousePressListener
     {
-        SoundInstance chickenRustle = Sounds.ChickenRustle.Play();
+       // SoundInstance chickenRustle = Sounds.ChickenRustle.Play();
 
         public PreGamePlayer()
             : base(250, 300)
@@ -36,7 +36,7 @@ namespace Project1
 
         public override void OnDestroy()
         {
-            chickenRustle.Stop();
+  //          chickenRustle.Stop();
             
             base.OnDestroy();
         }
