@@ -13,14 +13,32 @@ namespace UltraFoxyChickenFlightX
 
         private SoundInstance backgroundMusicInstance = Sounds.Background.Play(true, .5);
 
+		int imageIndex = 0;
+		int x0 = 350;
+		Sprite[] currentSprite;
+
 		public Player(Point location)
 			: base(location)
 		{
 			this.Velocity = InitialFlappingSpeed;
-			Sprite = Sprites.FoxyHappy;
+			currentSprite = Sprites.FoxyHappy;
+			Sprite = Sprites.FoxyHappy[imageIndex];
+			Alarm.Start(3, alarm => {
+				this.imageIndex = 1 - this.imageIndex;
+				this.Sprite = currentSprite[imageIndex];
+				this.Mask.Rectangle(new IntRectangle(740, 830, 200, 700) - Sprite.Origin.GetValueOrDefault());
+			}).IsLooping = true;
+
+
 			Transform.Scale *= 0.17;
-			Image.Speed = 0;
-			this.Mask.Rectangle(new IntRectangle(597, 681, 729 - 597, 1293 - 681) - Sprite.Origin.GetValueOrDefault());
+			Image.Speed = 0.5;
+			this.Mask.Rectangle(new IntRectangle(740, 830, 200, 700) - Sprite.Origin.GetValueOrDefault());
+		}
+
+		public void Scare()
+		{
+			currentSprite = Sprites.FoxyScared;
+			Alarm.Start(90, alarm => { this.currentSprite = Sprites.FoxyHappy; });
 		}
 
 		public void OnGlobalMousePress(MouseButton button)
@@ -60,7 +78,9 @@ namespace UltraFoxyChickenFlightX
 
 			Transform.Rotation = Angle.Deg(15 + 4 * GMath.Sin(Time.LoopCount * 0.1));
 
-            if (this.Y < -20 && this.Velocity.Y < 0)
+			X += (x0 - X) / 50.0;
+
+			if (this.Y < 0 && this.Velocity.Y < 0)
             {
                 this.Velocity = new Vector(this.Velocity.X, 0);
             }
@@ -82,6 +102,5 @@ namespace UltraFoxyChickenFlightX
 			Game.Sleep(1200);
 			Game.Quit();
 		}
-
 	}
 }

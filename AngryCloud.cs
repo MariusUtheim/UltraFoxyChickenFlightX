@@ -20,6 +20,7 @@ namespace UltraFoxyChickenFlightX
         {
             if (!(this.HasCollided))
             {
+				other.Scare();
                 Statistics.Score -= AngryCloud.ScorePenalty;
                 Statistics.Energy -= AngryCloud.EngeryPenalty; 
                 this.Sprite = Sprites.AngryCloudSuperAngry;

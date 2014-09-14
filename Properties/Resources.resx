@@ -135,11 +135,11 @@
   <data name="GoodTreeSoundName" xml:space="preserve">
     <value>Resources\bush.ogg</value>
   </data>
-  <data name="FoxyHappyFileName" xml:space="preserve">
-    <value>Resources\foxyhappy.png</value>
+  <data name="FoxyHappy1FileName" xml:space="preserve">
+    <value>Resources\foxyhappy1.png</value>
   </data>
-  <data name="FoxyScaredFileName" xml:space="preserve">
-    <value>Resources\foxyscared.png</value>
+  <data name="FoxyScared1FileName" xml:space="preserve">
+    <value>Resources\foxyscared1.png</value>
   </data>
   <data name="GoodTreeSpriteFileName" xml:space="preserve">
     <value>Resources\epletre.png</value>
@@ -191,5 +191,20 @@
   </data>
   <data name="ChickenRustleMusicFIleName" xml:space="preserve">
     <value>Resources\chicken house rustle.ogg</value>
+  </data>
+  <data name="FoxyHappy2FileName" xml:space="preserve">
+    <value>Resources\foxyhappy2.png</value>
+  </data>
+  <data name="FoxyScared2FileName" xml:space="preserve">
+    <value>Resources\foxyscared2.png</value>
+  </data>
+  <data name="MainMenuNewGameHoverFileName" xml:space="preserve">
+    <value>Resources\new_game_hover.png</value>
+  </data>
+  <data name="MainMenuQuitHoverFileName" xml:space="preserve">
+    <value>Resources\quit_hover.png</value>
+  </data>
+  <data name="LogoFileName" xml:space="preserve">
+    <value>Resources\UltraFoxyChickenFlightX.png</value>
   </data>
 </root>
