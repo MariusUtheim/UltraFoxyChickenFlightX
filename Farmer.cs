@@ -29,6 +29,11 @@ namespace UltraFoxyChickenFlightX
             X = x0 + 50 * GMath.Sin(Time.LoopCount / 180.0 * GMath.Tau);
 
             Transform.Rotation = (Time.LoopCount % 20 < 10) ? Angle.Deg(-6) : Angle.Deg(6);
+
+            if (this.X > 0 && farmerJoeSound == null)
+            {
+                farmerJoeSound = Sounds.FarmerJoe.Play();
+            }
         }
 
         public void OnCollision(Player player)
