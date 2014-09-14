@@ -18,6 +18,8 @@ namespace UltraFoxyChickenFlightX
             this.Y = Window.Height - this.Image.Height + 150;
 			
             this.Mask.Rectangle(new IntRectangle(80, 90, 1190-80, this.Sprite.Height - 90) - Sprite.Origin.GetValueOrDefault());
+
+            Sounds.FarmerJoe.Play();
         }
 
 		public override void OnStep()
