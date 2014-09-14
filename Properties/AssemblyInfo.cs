@@ -30,9 +30,9 @@ using System.Runtime.InteropServices;
 #endif
 #endif // !DEBUG
 #endregion
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Team No Assembly")]
 [assembly: AssemblyProduct("UltraFoxyChickenFlightX")]
-[assembly: AssemblyCopyright("***, 2014")]
+[assembly: AssemblyCopyright("Team No Assembly, 2014")]
 [assembly: AssemblyTrademark("Artic Game Jam 2014")]
 [assembly: AssemblyCulture("")]
 
