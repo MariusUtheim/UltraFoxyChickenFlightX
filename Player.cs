@@ -29,11 +29,20 @@ namespace UltraFoxyChickenFlightX
 				this.Mask.Rectangle(new IntRectangle(740, 830, 200, 700) - Sprite.Origin.GetValueOrDefault());
 			}).IsLooping = true;
 
+            Statistics.EnergyChanged += OnEnergyChanged;
 
 			Transform.Scale *= 0.17;
 			Image.Speed = 0.5;
 			this.Mask.Rectangle(new IntRectangle(740, 830, 200, 700) - Sprite.Origin.GetValueOrDefault());
 		}
+
+        private void OnEnergyChanged(int value)
+        {
+            if (value < FlappingCost)
+            {
+                this.Scare();
+            }
+        }
 
 		public void Scare()
 		{
@@ -80,7 +89,7 @@ namespace UltraFoxyChickenFlightX
 
 			X += (x0 - X) / 50.0;
 
-			if (this.Y < 0 && this.Velocity.Y < 0)
+			if (this.Y < -20 && this.Velocity.Y < 0)
             {
                 this.Velocity = new Vector(this.Velocity.X, 0);
             }
