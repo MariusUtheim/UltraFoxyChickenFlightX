@@ -207,4 +207,7 @@
   <data name="LogoFileName" xml:space="preserve">
     <value>Resources\UltraFoxyChickenFlightX.png</value>
   </data>
+  <data name="GroundfallFileName" xml:space="preserve">
+    <value>Resources\groundfall.ogg</value>
+  </data>
 </root>

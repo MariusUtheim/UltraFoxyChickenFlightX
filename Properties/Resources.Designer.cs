@@ -214,6 +214,15 @@ namespace UltraFoxyChickenFlightX.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resources\groundfall.ogg.
+        /// </summary>
+        internal static string GroundfallFileName {
+            get {
+                return ResourceManager.GetString("GroundfallFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resources\happycloud1.png.
         /// </summary>
         internal static string HappyCloudFileName1 {
