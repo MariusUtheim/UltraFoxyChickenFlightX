@@ -34,6 +34,7 @@ namespace UltraFoxyChickenFlightX
 
         public void OnCollision(Player player)
         {
+            Sounds.FarmerJoe.Play();
             player.Scare();
         }
     }
