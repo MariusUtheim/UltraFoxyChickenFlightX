@@ -24,8 +24,20 @@ namespace UltraFoxyChickenFlightX
 			: base(x, y)
 		{
 			this.LifeTime = lifeTime;
-			a = 1.0;
-			da = 1.0 / lifeTime;
+			a = 1.5;
+			da = 1.5 / lifeTime;
+			Depth = -1;
+	
+			particles = new Particle[count];
+			for (int i = 0; i < count; i++)
+			{
+				particles[i] = new Particle {
+					Sprite = Sprites.Particle,
+					Blend = GRandom.Choose(Color.ForestGreen, Color.LimeGreen),
+					Transform = new Transform { X = x, Y = y, Scale = new Vector(GRandom.Double(0.01, 0.05), Angle.Deg(45)), Rotation = GRandom.Angle() },
+					Velocity = new Transform { Location = (Point)(GRandom.Vector() * GRandom.Double(1.0, 4.0)) }
+				};
+			}
 		}
 
 		public int LifeTime { get; set; }
@@ -35,7 +47,8 @@ namespace UltraFoxyChickenFlightX
 			foreach (Particle p in particles)
 			{
 				p.Transform.Location += p.Velocity.Location;
-				p.Blend.Transparent(a);
+				p.Velocity.Y += 0.1;
+				p.Blend = p.Blend.Transparent(a);
 			}
 
 			a -= da;

@@ -23,6 +23,9 @@ namespace UltraFoxyChickenFlightX
             {
                 player.Velocity = BoostAward;
                 Sounds.GoodTree.Play();
+
+				Rectangle intersection = this.BoundingBox.Intersection(player.BoundingBox);
+				new Particles(intersection.Left - 80, intersection.Center.Y, 15, 60);
             }
             this.HasCollided = true;
 			wobble = 1.0;
