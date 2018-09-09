@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GameMaker;
+using GRaff;
 
 namespace UltraFoxyChickenFlightX
 {
@@ -11,18 +11,27 @@ namespace UltraFoxyChickenFlightX
 	{
 		public static void LoadAll()
 		{
-			return; // Initializes the files through lazy loading.
+            HappyCloud = SoundBuffer.Load(Properties.Resources.HappyCloudSoundName);
+            AngryCloud = SoundBuffer.Load(Properties.Resources.AngryCloudSoundName);
+            GoodTree = SoundBuffer.Load(Properties.Resources.GoodTreeSoundName);
+            BadTree = SoundBuffer.Load(Properties.Resources.BadTreeSoundName);
+            MainMenu = SoundBuffer.Load(Properties.Resources.MainMenuSoundName);
+            Background = SoundBuffer.Load(Properties.Resources.BackgroundMusicFileName);
+            Henhouse = SoundBuffer.Load(Properties.Resources.HenhouseSoundFileName);
+            BirdFlap = SoundBuffer.Load(Properties.Resources.BirdFlapFileName);
+            Groundfall = SoundBuffer.Load(Properties.Resources.GroundfallFileName);
+            FarmerJoe = SoundBuffer.Load(Properties.Resources.FarmerJoeSoundFileName);
 		}
 
-		public static Sound HappyCloud = new Sound(Properties.Resources.HappyCloudSoundName, true);
-        public static Sound AngryCloud = new Sound(Properties.Resources.AngryCloudSoundName, true);
-        public static Sound GoodTree = new Sound(Properties.Resources.GoodTreeSoundName, true);
-        public static Sound BadTree = new Sound(Properties.Resources.BadTreeSoundName, true);
-        public static Sound MainMenu = new Sound(Properties.Resources.MainMenuSoundName, true);
-        public static Sound Background = new Sound(Properties.Resources.BackgroundMusicFileName, true);
-        public static Sound Henhouse = new Sound(Properties.Resources.HenhouseSoundFileName, true);
-        public static Sound BirdFlap = new Sound(Properties.Resources.BirdFlapFileName, true);
-        public static Sound Groundfall = new Sound(Properties.Resources.GroundfallFileName, true);
-        public static Sound FarmerJoe = new Sound(Properties.Resources.FarmerJoeSoundFileName, true);
+		public static SoundBuffer HappyCloud;
+		public static SoundBuffer AngryCloud;
+		public static SoundBuffer GoodTree;
+		public static SoundBuffer BadTree;
+		public static SoundBuffer MainMenu;
+		public static SoundBuffer Background;
+		public static SoundBuffer Henhouse;
+		public static SoundBuffer BirdFlap;
+		public static SoundBuffer Groundfall;
+		public static SoundBuffer FarmerJoe;
 	}
 }

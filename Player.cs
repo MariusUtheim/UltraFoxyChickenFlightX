@@ -1,5 +1,7 @@
-﻿using GameMaker;
-using System;
+﻿using GRaff;
+using GRaff.Audio;
+using GRaff.Graphics;
+using GRaff.Synchronization;
 
 namespace UltraFoxyChickenFlightX
 {
@@ -14,7 +16,7 @@ namespace UltraFoxyChickenFlightX
         private static readonly Vector InitialFlappingSpeed = new Vector(0, -9);
         private static readonly Vector FlappingSpeed = new Vector(0, -4);
 
-        private SoundInstance backgroundMusicInstance = Sounds.Background.Play(true, TargetBackgroundVolume);
+        private SoundElement backgroundMusicInstance = Sounds.Background.Play(true, TargetBackgroundVolume);
 
         int imageIndex = 0;
         int x0 = 350;
@@ -22,22 +24,22 @@ namespace UltraFoxyChickenFlightX
 
         public Player(Point location)
             : base(location)
-        {
+		{
             this.Velocity = InitialFlappingSpeed;
             currentSprite = Sprites.FoxyHappy;
             Sprite = Sprites.FoxyHappy[imageIndex];
-            Alarm.Start(3, alarm =>
+			Alarm.Start(3, () =>
             {
                 this.imageIndex = 1 - this.imageIndex;
                 this.Sprite = currentSprite[imageIndex];
-                this.Mask.Rectangle(new IntRectangle(740, 830, 200, 700) - Sprite.Origin.GetValueOrDefault());
+				this.Mask.Shape = MaskShape.Rectangle(new Rectangle(740, 830, 200, 700) - Sprite.Origin);
             }).IsLooping = true;
 
             Statistics.EnergyChanged += OnEnergyChanged;
 
             Transform.Scale *= 0.17;
-            Image.Speed = 0.5;
-            this.Mask.Rectangle(new IntRectangle(740, 830, 200, 700) - Sprite.Origin.GetValueOrDefault());
+            Model.Speed = 0.5;
+			this.Mask.Shape = MaskShape.Rectangle(new Rectangle(740, 830, 200, 700) - Sprite.Origin);
         }
 
         private void OnEnergyChanged(int value)
@@ -51,7 +53,7 @@ namespace UltraFoxyChickenFlightX
         public void Scare()
         {
             currentSprite = Sprites.FoxyScared;
-            Alarm.Start(90, alarm => { this.currentSprite = Sprites.FoxyHappy; });
+			Alarm.Start(90, () => { this.currentSprite = Sprites.FoxyHappy; });
         }
 
         public void OnGlobalMousePress(MouseButton button)
@@ -103,12 +105,12 @@ namespace UltraFoxyChickenFlightX
 
             base.OnStep();
         }
-
-        public override void OnDestroy()
+        
+        protected override void OnDestroy()
 		{
-            backgroundMusicInstance.Stop();
+            backgroundMusicInstance.Destroy();
             Instance<Farmer>.Do(f => { f.Destroy(); });
-            new MainMenu();
+            Instance<MainMenu>.Create();
 		}
     }
 }

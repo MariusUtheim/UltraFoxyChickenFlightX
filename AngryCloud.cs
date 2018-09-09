@@ -1,4 +1,4 @@
-﻿using GameMaker;
+﻿using GRaff;
 using System;
 
 namespace UltraFoxyChickenFlightX
@@ -8,14 +8,14 @@ namespace UltraFoxyChickenFlightX
 		public const int ScorePenalty = 4;
         public const int EngeryPenalty = 32;
 
-
-		public AngryCloud() : base(Room.Width + 150, GRandom.Int(100, 300))
+        
+		public AngryCloud() : base(Window.Width + 150, GRandom.Integer(100, 300))
 		{
-			Sprite = Sprites.AngryCloud;
+			this.Sprite = Sprites.AngryCloud;
 			Transform.Scale *= 0.2;
-            this.Mask.Rectangle(new IntRectangle(245, 250, 754 - 245, 612 - 250) - Sprite.Origin.GetValueOrDefault());
+			this.Mask.Shape = MaskShape.Rectangle(new Rectangle(245, 250, 754 - 245, 612 - 250) - Sprite.Origin);
 		}
-
+        
         public override void OnCollision(Player other)
         {
             if (!(this.HasCollided))
@@ -24,7 +24,7 @@ namespace UltraFoxyChickenFlightX
                 Statistics.Score -= AngryCloud.ScorePenalty;
                 Statistics.Energy -= AngryCloud.EngeryPenalty; 
                 this.Sprite = Sprites.AngryCloudSuperAngry;
-                Sounds.AngryCloud.Play();
+				Sounds.AngryCloud.Play();
             }
             this.HasCollided = true;
 		}

@@ -1,4 +1,4 @@
-﻿using GameMaker;
+﻿using GRaff;
 using System;
 
 namespace UltraFoxyChickenFlightX
@@ -7,22 +7,23 @@ namespace UltraFoxyChickenFlightX
     {
         static int Main(string[] args)
         {
-            var gameroom = new Room(1600, 800);
-            Game.Run(gameroom, gameStart: GameStartup);
+            Game.Run(1600, 800, gameStart);
 
             return 0;
         }
 
-        static void GameStartup()
+        static void gameStart()
         {
 			GlobalEvent.ExitOnEscape = true;
 			Sprites.LoadAll();
 			Sounds.LoadAll();
-            Background.Sprite = new Sprite(Properties.Resources.BackgroundFileName);
-            Background.IsTiled = true;
+
+			var background = Instance.Create(new Background { Texture = Texture.Load(Properties.Resources.BackgroundFileName) });
+            background.IsTiled = true;
+
 			Window.Title = "ULTRA FOXY CHICKEN FLIGHT X";
 
-			new MainMenu();
+			Instance<MainMenu>.Create();
 		}
     }
 }

@@ -1,4 +1,5 @@
-﻿using GameMaker;
+﻿using GRaff;
+using GRaff.Synchronization;
 using System;
 using System.Linq;
 
@@ -36,16 +37,16 @@ namespace UltraFoxyChickenFlightX
 			spawnAlarm.Stop();
 		}
 
-		private static void spawnObject(Alarm alarm)
+		private static void spawnObject()
 		{
             var currentSpawnType = GRandom.Choose(spawnTypes.Except(new Type[] { lastSpawnType }).ToArray());
-            Activator.CreateInstance(currentSpawnType);
+			Instance.Create((GameElement)Activator.CreateInstance(currentSpawnType));
             lastSpawnType = currentSpawnType;
 		}
 
 		private static void moveBackground()
 		{
-			Background.Offset += SceneryObject.MovementSpeed / 4;
+			Instance.One<Background>().Offset += SceneryObject.MovementSpeed / 4;
 		}
 
 	}

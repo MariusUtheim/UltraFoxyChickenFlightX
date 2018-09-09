@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GameMaker;
+using GRaff;
+using GRaff.Graphics;
 
 namespace UltraFoxyChickenFlightX
 {
@@ -33,7 +34,7 @@ namespace UltraFoxyChickenFlightX
 			{
 				particles[i] = new Particle {
 					Sprite = Sprites.Particle,
-					Blend = GRandom.Choose(Color.ForestGreen, Color.LimeGreen),
+					Blend = GRandom.Choose(Colors.ForestGreen, Colors.LimeGreen),
 					Transform = new Transform { X = x, Y = y, Scale = new Vector(GRandom.Double(0.01, 0.05), Angle.Deg(45)), Rotation = GRandom.Angle() },
 					Velocity = new Transform { Location = (Point)(GRandom.Vector() * GRandom.Double(1.0, 4.0)) }
 				};
@@ -60,7 +61,7 @@ namespace UltraFoxyChickenFlightX
 		{
 			foreach (Particle p in particles)
 			{
-				Draw.Sprite(p.Transform, p.Blend, p.Sprite, 0);
+				Draw.Sprite(p.Sprite, 0, p.Transform, p.Blend);
 			}
 		}
 	}

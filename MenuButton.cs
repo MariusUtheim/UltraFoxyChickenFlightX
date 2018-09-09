@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameMaker;
+using GRaff;
+using GRaff.Graphics;
 
 namespace UltraFoxyChickenFlightX
 {
@@ -19,7 +16,7 @@ namespace UltraFoxyChickenFlightX
 			this.Sprite = baseSprite = sprite;
 			this.hoverSprite = hoverSprite;
 			this.onClick = onClick;
-			Image.Speed = 0;
+			Model.Speed = 0;
 			IsEnabled = true;
 			Depth = -2;
 		}
@@ -28,7 +25,7 @@ namespace UltraFoxyChickenFlightX
 		
 		public override void OnStep()
 		{
-			if (BoundingBox.ContainsPoint(Mouse.Location))
+			if (BoundingBox.Contains(Mouse.Location))
 				Sprite = hoverSprite;
 			else
 				Sprite = baseSprite;

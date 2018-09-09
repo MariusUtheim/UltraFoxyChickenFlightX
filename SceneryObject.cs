@@ -1,7 +1,7 @@
-﻿using GameMaker;
+﻿using GRaff;
 using System;
 
-namespace UltraFoxyChickenFlightX
+namespace UltraFoxyChickenFlightX 
 {
     public abstract class SceneryObject : MovingObject, ICollisionListener<Player>
     {
@@ -14,19 +14,20 @@ namespace UltraFoxyChickenFlightX
             set { this.collision = value; }
         }
 
-        public SceneryObject(double x, double y) : base(x, y) 
+		public SceneryObject(double x, double y) : base(x, y) 
         {
 			this.Velocity = MovementSpeed;
         }
 
         public override void OnEndStep()
         {
-            if ((this.X + this.Image.Width) < 0)
+            if ((this.X + this.Model.Width) < 0)
             {
                 this.Destroy();
             }
         }
 
 		public abstract void OnCollision(Player player);
-    }
+
+	}
 }

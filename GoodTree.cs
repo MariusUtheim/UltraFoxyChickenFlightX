@@ -1,4 +1,4 @@
-﻿using GameMaker;
+﻿using GRaff;
 using System;
 
 namespace UltraFoxyChickenFlightX
@@ -10,11 +10,11 @@ namespace UltraFoxyChickenFlightX
 		private double wobbleAmount = 0;
 
 		public GoodTree() 
-			: base(Room.Width + 150, Room.Height - 80)
+			: base(Window.Width + 150, Window.Height - 80)
 		{
 			this.Sprite = Sprites.GoodTree;
 			this.Transform.Scale *= 0.35;
-			this.Mask.Rectangle(new IntRectangle(55, 66, 726 - 55, this.Sprite.Height - 66) - Sprite.Origin.GetValueOrDefault());
+			this.Mask.Shape = MaskShape.Rectangle(new Rectangle(55, 66, 726 - 55, this.Sprite.Height - 66) - Sprite.Origin);
 		}
 
 		public override void OnCollision(Player player)
@@ -24,8 +24,8 @@ namespace UltraFoxyChickenFlightX
                 player.Velocity = BoostAward;
                 Sounds.GoodTree.Play();
 
-				Rectangle intersection = this.BoundingBox.Intersection(player.BoundingBox);
-				new Particles(intersection.Left - 80, intersection.Center.Y, 15, 60);
+				Rectangle intersection = this.BoundingBox.Intersection(player.BoundingBox).Value;
+				Instance.Create(new Particles(intersection.Left - 80, intersection.Center.Y, 15, 60));
             }
             this.HasCollided = true;
 			wobble = 1.0;

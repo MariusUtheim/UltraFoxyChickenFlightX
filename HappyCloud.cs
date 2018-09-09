@@ -1,4 +1,4 @@
-﻿using GameMaker;
+﻿using GRaff;
 using System;
 
 namespace UltraFoxyChickenFlightX
@@ -10,11 +10,11 @@ namespace UltraFoxyChickenFlightX
 		private double wobbleAmount = 0;
 
         public HappyCloud()
-            : base(Room.Width + 150, GRandom.Int(100, 300))
+            : base(Window.Width + 150, GRandom.Integer(100, 300))
         {
             this.Sprite = Sprites.HappyCloud;
             this.Transform.Scale *= .2;
-            this.Mask.Rectangle(new IntRectangle(126, 283, 528 - 126, this.Sprite.Height - 283) - Sprite.Origin.GetValueOrDefault());
+            this.Mask.Shape = MaskShape.Rectangle(new Rectangle(126, 283, 528 - 126, this.Sprite.Height - 283) - Sprite.Origin);
         }
 
 		public override void OnCollision(Player player)

@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameMaker;
-using OpenTK.Graphics.OpenGL;
+﻿using GRaff;
+using GRaff.Graphics;
 
 namespace UltraFoxyChickenFlightX
 {
 	public static class GUI
 	{
-		private static readonly Sprite NumbersSprite = new Sprite(Properties.Resources.NumbersSpriteFileName, 10, new IntVector(0, 0), true);
+		private static readonly Sprite NumbersSprite = Sprite.Load(Properties.Resources.NumbersSpriteFileName, 10, new IntVector(0, 0));
 
 		public static void Init()
 		{
@@ -21,16 +16,18 @@ namespace UltraFoxyChickenFlightX
 		{
 			Rectangle fullHealthRegion = new Rectangle(20, 20, 128, 20);
 			Rectangle currentHealthRegion = new Rectangle(20, 20, Statistics.Energy, 20);
-            Fill.Rectangle(Color.Red, Color.Yellow, Color.Yellow, Color.Red, currentHealthRegion);
-			Draw.Rectangle(Color.Black, fullHealthRegion);
+			Draw.FillRectangle(currentHealthRegion, Colors.Red, Colors.Yellow, Colors.Yellow, Colors.Red);
+			Draw.Rectangle(fullHealthRegion, Colors.Black);
 
 			DrawString(20, 50, Statistics.Score.ToString());
 		}
 
 		public static void DrawString(double x, double y, string str)
 		{
+			/*
 			GL.Enable(EnableCap.Texture2D);
-			GL.BindTexture(TextureTarget.Texture2D, NumbersSprite.GetTexture(0).Id);
+            
+			GL.BindTexture(TextureTarget.Texture2D, NumbersSprite.SubImage(0).Id);
 
 			double dx = NumbersSprite.Width;
 			double du = 0.1;
@@ -52,6 +49,7 @@ namespace UltraFoxyChickenFlightX
 
 			GL.End();
 			GL.Disable(EnableCap.Texture2D);
+			*/
 		}
 	}
 }

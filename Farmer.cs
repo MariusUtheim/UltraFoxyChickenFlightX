@@ -1,26 +1,28 @@
-﻿using GameMaker;
+﻿using GRaff;
+using GRaff.Audio;
+using GRaff.Graphics;
 using System;
 
 namespace UltraFoxyChickenFlightX
 {
     public class Farmer : GameObject, ICollisionListener<Player>
     {
-        public static readonly Sprite FileSprite = new Sprite(Properties.Resources.FarmerFileName);
+        public static readonly Sprite FileSprite = Sprite.Load(Properties.Resources.FarmerFileName);
         double x0;
-        private SoundInstance farmerJoeSound;
+        private SoundElement farmerJoeSound;
 
         public bool IsMoveOut { get; set; }
 
         public Farmer()
-            : base(Instance<Player>.First().Location.X - 160, 0)
+            : base(Instance.One<Player>().Location.X - 160, 0)
         {
             this.Depth = -1;
             this.Sprite = FileSprite;
             this.Transform.Scale *= .17;
             x0 = -2500;
-            this.Y = Window.Height - this.Image.Height + 150;
-
-            this.Mask.Rectangle(new IntRectangle(80, 90, 1190 - 80, this.Sprite.Height - 90) - Sprite.Origin.GetValueOrDefault());
+			this.Y = Window.Height - this.Model.Height + 150;
+            
+			this.Mask.Shape = MaskShape.Rectangle(new Rectangle(80, 90, 1190 - 80, this.Sprite.Height - 90) - Sprite.Origin);
         }
 
         public override void OnStep()
@@ -41,7 +43,7 @@ namespace UltraFoxyChickenFlightX
 
         public void OnCollision(Player player)
         {
-            if (farmerJoeSound != null && farmerJoeSound.Sound != null && farmerJoeSound.State == SoundState.Stopped)
+			if (farmerJoeSound != null && !farmerJoeSound.Exists)
                 farmerJoeSound = Sounds.FarmerJoe.Play();
 
             player.Scare();

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameMaker;
+using GRaff;
+using GRaff.Audio;
 
 namespace UltraFoxyChickenFlightX
 {
@@ -12,24 +9,17 @@ namespace UltraFoxyChickenFlightX
 		bool isFadingOut = false;
 		double tweenAmount;
 
-        SoundInstance menuSoundInstance = Sounds.MainMenu.Play(true, .8);
+        SoundElement menuSoundInstance = Sounds.MainMenu.Play(true, .8);
 
 		public MainMenu()
 			: base(800, 350)
 		{
-#if true
 			Sprite = Sprites.Logo;
 			Spawner.Activate();
 			Depth = -1;
 			tweenAmount = 0.0;
-			new MenuButton(800, 450, Sprites.NewGame, Sprites.NewGameHover, button => this.NewGame());
-			new MenuButton(800, 600, Sprites.Quit, Sprites.QuitHover, button => Game.Quit());
-#else
-			new Player(new Point(350, 250));
-			Spawner.Activate();
-			this.Destroy();
-			GUI.Init();
-#endif
+			Instance.Create(new MenuButton(800, 450, Sprites.NewGame, Sprites.NewGameHover, button => this.NewGame()));
+			Instance.Create(new MenuButton(800, 600, Sprites.Quit, Sprites.QuitHover, button => Game.Quit()));
 		}
 
 		public override void OnStep()
@@ -37,15 +27,15 @@ namespace UltraFoxyChickenFlightX
 			if (isFadingOut)
 			{
 				tweenAmount += 0.01;
-				Image.Alpha = (1 + Math.Cos(tweenAmount * GMath.Tau / 2)) / 2;
-				Instance<MenuButton>.Do(inst => inst.Image.Alpha = this.Image.Alpha);
-				Instance<SceneryObject>.Do(inst => inst.Image.Alpha = this.Image.Alpha);
-				if (Image.Alpha <= 0)
+				Model.Alpha = (1 + Math.Cos(tweenAmount * GMath.Tau / 2)) / 2;
+				Instance<MenuButton>.Do(inst => inst.Model.Alpha = this.Model.Alpha);
+				Instance<SceneryObject>.Do(inst => inst.Model.Alpha = this.Model.Alpha);
+				if (Model.Alpha <= 0)
 				{
 					Instance<MenuButton>.Do(inst => inst.Destroy());
 					Instance<SceneryObject>.Do(inst => inst.Destroy());
-					new PreGamePlayer();
-					new Henhouse();
+					Instance<PreGamePlayer>.Create();
+					Instance<Henhouse>.Create();
 					this.Destroy();
 				}
 			}
@@ -62,15 +52,15 @@ namespace UltraFoxyChickenFlightX
 
 		public override void OnDraw()
 		{
-			Fill.Rectangle(new Color((int)(64 * Image.Alpha), 40, 40, 80), 0, 0, Room.Width, Room.Height);
-			Fill.Rectangle(Color.Black, 0, 0, Room.Width, Room.Height / 10 * Image.Alpha);
-			Fill.Rectangle(Color.Black, 0, Room.Height * (10 - Image.Alpha) / 10, Room.Width, Room.Height / 10 * Image.Alpha);
+			Draw.FillRectangle(new Rectangle(0, 0, Window.Width, Window.Height), Color.FromRgba(80, 40, 40, (int)(64 * Model.Alpha)));
+			Draw.FillRectangle(new Rectangle(0, 0, Window.Width, Window.Height / 10 * Model.Alpha), Colors.Black);
+			Draw.FillRectangle(new Rectangle(0, Window.Height * (10 - Model.Alpha) / 10, Window.Width, Window.Height / 10 * Model.Alpha), Colors.Black);
 			base.OnDraw();
 		}
 
-        public override void OnDestroy()
+        protected override void OnDestroy()
         {
-            menuSoundInstance.Stop();
+            menuSoundInstance.Destroy();
             
             base.OnDestroy();
         }
